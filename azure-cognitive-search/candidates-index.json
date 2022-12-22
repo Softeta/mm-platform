@@ -1,0 +1,186 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "facetable": false,
+      "filterable": false,
+      "key": true,
+      "retrievable": true,
+      "searchable": false,
+      "sortable": false,
+      "analyzer": null,
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "CurrentPosition",
+      "type": "Edm.String",
+      "facetable": false,
+      "filterable": false,
+      "key": false,
+      "retrievable": false,
+      "searchable": true,
+      "sortable": false,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "Skills",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": false,
+      "retrievable": false,
+      "searchable": true,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "Seniority",
+      "type": "Edm.String",
+      "facetable": false,
+      "filterable": false,
+      "key": false,
+      "retrievable": false,
+      "searchable": true,
+      "sortable": false,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "WorkTypes",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": false,
+      "retrievable": false,
+      "searchable": true,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "WorkingHourTypes",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": false,
+      "retrievable": false,
+      "searchable": true,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "WorkingFormats",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": false,
+      "retrievable": false,
+      "searchable": true,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "Industries",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": false,
+      "retrievable": false,
+      "searchable": true,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "Languages",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": false,
+      "retrievable": false,
+      "searchable": true,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "Location",
+      "type": "Edm.String",
+      "facetable": false,
+      "filterable": false,
+      "key": false,
+      "retrievable": false,
+      "searchable": true,
+      "sortable": false,
+      "analyzer": "standard.lucene",
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    },
+    {
+      "name": "JobIds",
+      "type": "Collection(Edm.String)",
+      "facetable": false,
+      "filterable": true,
+      "retrievable": false,
+      "searchable": false,
+      "analyzer": null,
+      "indexAnalyzer": null,
+      "searchAnalyzer": null,
+      "synonymMaps": [],
+      "fields": []
+    }
+  ],
+  "suggesters": [],
+  "scoringProfiles": [
+    {
+      "name": "CandidateSearchScoringProfile",
+      "functions": [],
+      "functionAggregation": null,
+      "text": {
+        "weights": {
+          "CurrentPosition": 8,
+          "Skills": 8,
+          "WorkTypes": 8,
+          "Seniority": 5,
+          "Languages": 5,
+          "WorkingFormats": 3,
+          "Industries": 3,
+          "Location": 5
+        }
+      }
+    }
+  ],
+  "defaultScoringProfile": "CandidateSearchScoringProfile",
+  "corsOptions": null,
+  "analyzers": [],
+  "charFilters": [],
+  "tokenFilters": [],
+  "tokenizers": [],
+  "similarity": {
+    "@odata.type": "#Microsoft.Azure.Search.BM25Similarity",
+    "k1": null,
+    "b": null
+  }
+}

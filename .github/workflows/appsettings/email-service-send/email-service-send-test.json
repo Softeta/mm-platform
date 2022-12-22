@@ -1,0 +1,277 @@
+[
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-test-01",
+    "slotSetting": false
+  },
+  {
+    "name": "AuthorizationTenantId",
+    "value": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "StorageAccountName",
+    "value": "stmmplatformprivatetest",
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__Url",
+    "value": "https://portal.mmtest2.com/myprofile/{0}/verification/{1}",
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__TemplateId__EN",
+    "value": 2,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__TemplateId__DA",
+    "value": 3,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__TemplateId__SV",
+    "value": 4,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__Url",
+    "value": "https://portal.mmtest2.com/findtalent/{0}/{1}/verification/{2}",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__TemplateId__EN",
+    "value": 19,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__TemplateId__DA",
+    "value": 17,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__TemplateId__SV",
+    "value": 18,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__Url",
+    "value": "https://portal.mmtest2.com/myprofile",
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__TemplateId__EN",
+    "value": 6,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__TemplateId__DA",
+    "value": 7,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__TemplateId__SV",
+    "value": 5,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateRejected__TemplateId__EN",
+    "value": 16,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateRejected__TemplateId__DA",
+    "value": 14,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateRejected__TemplateId__SV",
+    "value": 15,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__Url",
+    "value": "https://portal.mmtest2.com/findtalent",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__TemplateId__EN",
+    "value": 22,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__TemplateId__DA",
+    "value": 20,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__TemplateId__SV",
+    "value": 21,
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__Url",
+    "value": "https://portal.mmtest2.com/findtalent",
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__TemplateId__EN",
+    "value": 36,
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__TemplateId__DA",
+    "value": 35,
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__TemplateId__SV",
+    "value": 37,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__Url",
+    "value": "https://portal.mmtest2.com/myprofile",
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__TemplateId__EN",
+    "value": 8,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__TemplateId__DA",
+    "value": 9,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__TemplateId__SV",
+    "value": 10,
+    "slotSetting": false
+  },
+  {
+    "name": "JobApproved__TemplateId__EN",
+    "value": 27,
+    "slotSetting": false
+  },
+  {
+    "name": "JobApproved__TemplateId__DA",
+    "value": 26,
+    "slotSetting": false
+  },
+  {
+    "name": "JobApproved__TemplateId__SV",
+    "value": 28,
+    "slotSetting": false
+  },
+  {
+    "name": "JobRejected__TemplateId__EN",
+    "value": 33,
+    "slotSetting": false
+  },
+  {
+    "name": "JobRejected__TemplateId__DA",
+    "value": 32,
+    "slotSetting": false
+  },
+  {
+    "name": "JobRejected__TemplateId__SV",
+    "value": 34,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__Url",
+    "value": "https://portal.mmtest2.com/findtalent/presentation/shortlist",
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__SignupUrl",
+    "value": "https://portal.mmtest2.com/findtalent/signup",
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__TemplateId__EN",
+    "value": 31,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__TemplateId__DA",
+    "value": 30,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__TemplateId__SV",
+    "value": 29,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateAppliedToJob__TemplateId__EN",
+    "value": 12,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateAppliedToJob__TemplateId__DA",
+    "value": 11,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateAppliedToJob__TemplateId__SV",
+    "value": 13,
+    "slotSetting": false
+  },
+  {
+    "name": "JobSubmitted__TemplateId__EN",
+    "value": 24,
+    "slotSetting": false
+  },
+  {
+    "name": "JobSubmitted__TemplateId__DA",
+    "value": 23,
+    "slotSetting": false
+  },
+  {
+    "name": "JobSubmitted__TemplateId__SV",
+    "value": 25,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__Url",
+    "value": "https://portal.mmtest2.com/findtalent/signup",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__TemplateId__EN",
+    "value": 43,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__TemplateId__DA",
+    "value": 40,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__TemplateId__SV",
+    "value": 39,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__Url",
+    "value": "https://portal.mmtest2.com/findtalent/signup",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__TemplateId__EN",
+    "value": 42,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__TemplateId__DA",
+    "value": 41,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__TemplateId__SV",
+    "value": 38,
+    "slotSetting": false
+  }
+]

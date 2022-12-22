@@ -1,0 +1,232 @@
+[
+ {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-prod",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "28f00fa0-5cbf-4607-b430-566d4c679edc",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://mmselfservicecandidatesprod.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "mmselfservicecandidatesprod.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "cc635bcc-0172-4d96-8fd8-e18d3105b7ff",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__TenantId",
+    "value": "0dc6237c-8f4a-4e4a-a8e1-b8c1dad2431b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://mmselfservicecompaniesprod.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "mmselfservicecompaniesprod.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "24c5c0a1-77f8-42c4-a801-c61154132f06",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__TenantId",
+    "value": "7f0bc358-d1ed-4dc9-93e5-98e038063cb3",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "54539bf4-7ce6-4fca-83c5-9a56248379a3",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-prod-01",
+    "slotSetting": false
+  },
+  {
+    "name": "PublicStorageAccount__AccountName",
+    "value": "stmmplatformpublicprod",
+    "slotSetting": false
+  },
+  {
+    "name": "PrivateStorageAccount__AccountName",
+    "value": "stmmplatformprivateprod",
+    "slotSetting": false
+  },
+  {
+    "name": "PrivateStorageAccount__ExpirationInMinutes",
+    "value": 15,
+    "slotSetting": false
+  },
+  {
+    "name": "HereSearchApi__Uri",
+    "value": "https://geocode.search.hereapi.com/v1/geocode",
+    "slotSetting": false
+  },
+  {
+    "name": "RegisteredCandidateSettings__ExpiresInDays",
+    "value": 7,
+    "slotSetting": false
+  },
+  {
+    "name": "CacheSettings__FileExpiresInMinutes",
+    "value": 720,
+    "slotSetting": false
+  },
+  {
+    "name": "ImageSettings__MaxSizeInKilobytes",
+    "value": "1024",
+    "slotSetting": false
+  },
+  {
+    "name": "ImageSettings__SupportedTypes",
+    "value": "[string(parameters('image/jpeg', 'image/png', 'image/svg'))]",
+    "slotSetting": false
+  },
+  {
+    "name": "TalogyApi__AuthUrl",
+    "value": "https://livecluster.cubiksconnect.com/connect/token",
+    "slotSetting": false
+  },
+  {
+    "name": "TalogyApi__Url",
+    "value": "https://api.cubiksconnect.com",
+    "slotSetting": false
+  },
+  {
+    "name": "TalogyApi__ClientId",
+    "value": "ConnectApi-Banyo-MarcherMarkholt",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__PackageTypes__Logic",
+    "value": "MarcherMarkholt-General-LGI",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__PackageTypes__Personality",
+    "value": "MarcherMarkholt-General-PAPI3NSL",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiDynamicWheel__Id",
+    "value": "MarcherMarkholt-PAPI3NSL-General-Dynamic",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiDynamicWheel__FileFormat",
+    "value": "text/html",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiGeneralFeedback__Id",
+    "value": "MarcherMarkholt-PAPI3NSL-General-Feedback",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiGeneralFeedback__FileFormat",
+    "value": "application/pdf",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__LgiGeneralFeedback__Id",
+    "value": "NEW-MarcherMarkholt-Hire-General-CandidateFeedback",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__LgiGeneralFeedback__FileFormat",
+    "value": "application/pdf",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__SupportedLocales__EN",
+    "value": "en-GB",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__SupportedLocales__DA",
+    "value": "da-DK",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__DefaultLocale",
+    "value": "en-GB",
+    "slotSetting": false
+  },
+  {
+    "name": "SelfService__ApiUrl",
+    "value": "https://api.marchermarkholt.com",
+    "slotSetting": false
+  },
+  {
+    "name": "SelfService__Website__Url",
+    "value": "https://portal.marchermarkholt.com",
+    "slotSetting": false
+  },
+  {
+    "name": "SelfService__Website__TestsPath",
+    "value": "myprofile/tests",
+    "slotSetting": false
+  },
+  {
+    "name": "SwaggerOptions__IsTurnedOn",
+    "value": false,
+    "slotSetting": false
+  }
+]

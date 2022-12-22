@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "EmailService.WebHook": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7377"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 34944,
+      "useSSL": false
+    }
+  }
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-sand",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "5b69cba7-c95c-4769-8a5d-af0886130a3b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://marchermarholtcompanies.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "marchermarholtcompanies.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "e8088e65-b0a3-4023-9da9-7ab397636546",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__TenantId",
+    "value": "f12637ab-5f4b-46a6-8a95-fd08676e1b12",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyB2CExtensionsApp__ApplicationId",
+    "value": "d60b1366-ed7f-4da6-b205-0433cf0ba369",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Default",
+    "value": "Debug",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Microsoft__AspNetCore",
+    "value": "Debug",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "4d275769-afc5-491e-ad80-9447b40863cc",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-sand-01",
+    "slotSetting": false
+  },
+  {
+    "name": "PublicStorageAccount__AccountName",
+    "value": "stmmplatformpublicsand",
+    "slotSetting": false
+  },
+  {
+    "name": "PrivateStorageAccount__AccountName",
+    "value": "stmmplatformprivatesand",
+    "slotSetting": false
+  },
+  {
+    "name": "PrivateStorageAccount__ExpirationInMinutes",
+    "value": 15,
+    "slotSetting": false
+  },
+  {
+    "name": "DanishCrvApi__Uri",
+    "value": "http://distribution.virk.dk/cvr-permanent/virksomhed/_search",
+    "slotSetting": false
+  },
+  {
+    "name": "DanishCrvApi__UserId",
+    "value": "Marcher_Markolt_CVR_I_SKYEN",
+    "slotSetting": false
+  },
+  {
+    "name": "CacheSettings__FileExpiresInMinutes",
+    "value": 720,
+    "slotSetting": false
+  },
+  {
+    "name": "VerificationSettings__ExpiresInMinutes",
+    "value": 1440,
+    "slotSetting": false
+  },
+  {
+    "name": "RegisteredContactPersonSettings__ExpiresInDays",
+    "value": 7,
+    "slotSetting": false
+  },
+  {
+    "name": "ImageSettings__MaxSizeInKilobytes",
+    "value": "1024",
+    "slotSetting": false
+  },
+  {
+    "name": "ImageSettings__SupportedTypes",
+    "value": "[string(parameters('image/jpeg', 'image/png', 'image/svg'))]",
+    "slotSetting": false
+  }
+]

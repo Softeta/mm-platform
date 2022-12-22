@@ -1,0 +1,90 @@
+name: Administration Settings API CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/AdministrationSettings/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - .github/workflows/administration-settings-api.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_common.yml
+      - .github/workflows/appsettings/administration-settings/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/AdministrationSettings/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - .github/workflows/administration-settings-api.yml
+      - .github/workflows/appsettings/administration-settings/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/AdministrationSettings
+      project_name: AdministrationSettings.API
+      appsettings_path: administration-settings
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-administration-settings-sand
+        azure_web_app_slot_name: production
+        project_name: AdministrationSettings.API
+        appsettings_json: administration-settings/administration-settings-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-administration-settings-dev
+        azure_web_app_slot_name: production
+        project_name: AdministrationSettings.API
+        appsettings_json: administration-settings/administration-settings-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+  
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-administration-settings-test
+        azure_web_app_slot_name: stage
+        project_name: AdministrationSettings.API
+        appsettings_json: administration-settings/administration-settings-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-administration-settings-prod
+        project_name: AdministrationSettings.API
+        azure_web_app_slot_name: stage
+        appsettings_json: administration-settings/administration-settings-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+

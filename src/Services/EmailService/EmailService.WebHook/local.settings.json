@@ -1,0 +1,11 @@
+﻿{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "GlobalKeyVault": "kv-mm-platform-local",
+    "AuthorizationTenantId": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "StorageAccountName": "stmmplatformprivatelocal",
+    "IsDockerRunning": false
+  }
+}

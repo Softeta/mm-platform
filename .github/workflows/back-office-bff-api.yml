@@ -1,0 +1,125 @@
+name: Back Office API CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/ApiGateways/BackOffice/BackOffice.Bff.API/**
+      - src/ApiGateways/BackOffice/BackOffice.Shared/**
+      - src/BuildingBlocks/**
+      - .github/workflows/back-office-bff-api.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_common.yml
+      - .github/workflows/appsettings/backoffice/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/ApiGateways/BackOffice/BackOffice.Bff.API/**
+      - src/ApiGateways/BackOffice/BackOffice.Shared/**
+      - src/BuildingBlocks/**
+      - .github/workflows/back-office-bff-api.yml
+      - .github/workflows/appsettings/backoffice/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/ApiGateways/BackOffice
+      project_name: BackOffice.Bff.API
+      appsettings_path: backoffice
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-back-office-sand
+        azure_web_app_slot_name: production
+        project_name: BackOffice.Bff.API
+        appsettings_json: backoffice/backoffice-sand.json
+        yarn_replace_needed: true
+        yarp_job_api_address: https://app-mm-job-sand.azurewebsites.net
+        yarp_jobcandidates_api_address: https://app-mm-job-sand.azurewebsites.net
+        yarp_company_api_address: https://app-mm-company-sand.azurewebsites.net
+        yarp_candidate_api_address: https://app-mm-candidate-sand.azurewebsites.net
+        yarp_candidatetests_api_address: https://app-mm-candidate-sand.azurewebsites.net
+        yarp_skill_api_address: https://app-mm-tags-sand.azurewebsites.net
+        yarp_jobposition_api_address: https://app-mm-tags-sand.azurewebsites.net
+        yarn_administrationsettings_api_address: https://app-mm-administration-settings-sand.azurewebsites.net
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-back-office-dev
+        azure_web_app_slot_name: production
+        project_name: BackOffice.Bff.API
+        appsettings_json: backoffice/backoffice-dev.json
+        yarn_replace_needed: true
+        yarp_job_api_address: https://app-mm-job-dev.azurewebsites.net
+        yarp_jobcandidates_api_address: https://app-mm-job-dev.azurewebsites.net
+        yarp_company_api_address: https://app-mm-company-dev.azurewebsites.net
+        yarp_candidate_api_address: https://app-mm-candidate-dev.azurewebsites.net
+        yarp_candidatetests_api_address: https://app-mm-candidate-dev.azurewebsites.net
+        yarp_skill_api_address: https://app-mm-tags-dev.azurewebsites.net
+        yarp_jobposition_api_address: https://app-mm-tags-dev.azurewebsites.net
+        yarn_administrationsettings_api_address: https://app-mm-administration-settings-dev.azurewebsites.net
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+  
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-back-office-test
+        azure_web_app_slot_name: stage
+        project_name: BackOffice.Bff.API
+        appsettings_json: backoffice/backoffice-test.json
+        yarn_replace_needed: true
+        yarp_job_api_address: https://app-mm-job-test.azurewebsites.net
+        yarp_jobcandidates_api_address: https://app-mm-job-test.azurewebsites.net
+        yarp_company_api_address: https://app-mm-company-test.azurewebsites.net
+        yarp_candidate_api_address: https://app-mm-candidate-test.azurewebsites.net
+        yarp_candidatetests_api_address: https://app-mm-candidate-test.azurewebsites.net
+        yarp_skill_api_address: https://app-mm-tags-test.azurewebsites.net
+        yarp_jobposition_api_address: https://app-mm-tags-test.azurewebsites.net
+        yarn_administrationsettings_api_address: https://app-mm-administration-settings-test.azurewebsites.net
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-back-office-prod
+        azure_web_app_slot_name: stage
+        project_name: BackOffice.Bff.API
+        appsettings_json: backoffice/backoffice-prod.json
+        yarn_replace_needed: true
+        yarp_job_api_address: https://app-mm-job-prod.azurewebsites.net
+        yarp_jobcandidates_api_address: https://app-mm-job-prod.azurewebsites.net
+        yarp_company_api_address: https://app-mm-company-prod.azurewebsites.net
+        yarp_candidate_api_address: https://app-mm-candidate-prod.azurewebsites.net
+        yarp_candidatetests_api_address: https://app-mm-candidate-prod.azurewebsites.net
+        yarp_skill_api_address: https://app-mm-tags-prod.azurewebsites.net
+        yarp_jobposition_api_address: https://app-mm-tags-prod.azurewebsites.net
+        yarn_administrationsettings_api_address: https://app-mm-administration-settings-prod.azurewebsites.net
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

@@ -1,0 +1,117 @@
+[
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://mmselfservicecandidatestest.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "mmselfservicecandidatestest.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "e4f79359-fcb7-40d9-acb8-5c1045355f5b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://mmselfservicecompaniestest.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "mmselfservicecompaniestest.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "4e8363a3-877d-4882-886a-4edd4cb83283",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__TenantId",
+    "value": "9f795584-71f1-4637-a398-846605bf0c6e",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Default",
+    "value": "Information",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Microsoft__AspNetCore",
+    "value": "Warning",
+    "slotSetting": false
+  },
+  {
+    "name": "AllowedHosts",
+    "value": "*",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "6eba5796-6fd9-4016-89ed-4142fc940fe6",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-test-01",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__JobsApiUrl",
+    "value": "https://app-mm-job-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CompaniesApiUrl",
+    "value": "https://app-mm-company-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CandidatesApiUrl",
+    "value": "https://app-mm-candidate-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__ElasticSearchApiUrl",
+    "value": "https://func-mm-elastic-search-search-test.azurewebsites.net/",
+    "slotSetting": false   
+  },
+  {
+    "name": "Cors__AllowedOrigins",
+    "value": "https://portal.mmtest2.com;https://calm-river-00b862703.1.azurestaticapps.net",
+    "slotSetting": false
+  },
+  {
+    "name": "SwaggerOptions__ApplicationId",
+    "value": "06a3c7f8-092b-4a3a-8c86-1b6cbab609ca",
+    "slotSetting": false
+  },
+  {
+    "name": "ElasticSearch__RecommendedJobsKey",
+    "value": "jw9pjK83xUFS27-byloV8m5_tGgE5b1ojzrPXFEurzoDAzFu7H1-Cg==",
+    "slotSetting": false
+  }
+]

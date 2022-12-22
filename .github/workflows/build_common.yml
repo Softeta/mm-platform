@@ -1,0 +1,63 @@
+name: Reusable API build 
+
+on:
+  workflow_call:
+    inputs:
+      project_path:
+        required: true
+        type: string
+      project_name:
+        required: true
+        type: string
+      appsettings_path:
+        required: true
+        type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ inputs.project_path }}
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Validate json
+      run: | 
+        find ${GITHUB_WORKSPACE}/.github/workflows/appsettings/${{ inputs.appsettings_path }}/ -name *.json -printf "%p\n" -exec jq . {} +
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore Marcher Markholt solution
+      working-directory: src
+      run: dotnet restore MarcherMarkholt.sln
+
+    - name: Build ${{ inputs.project_name }}
+      run: dotnet build ${{ inputs.project_name }} --configuration Release
+
+    - name: Run tests ${{ inputs.project_name }}
+      if: ${{ github.event_name == 'pull_request' }}
+      shell: pwsh 
+      run: |
+        Get-ChildItem '.\Tests' -recurse | where {$_.extension -eq '.csproj'} | % { dotnet test $_.FullName --configuration Release; if($? -ne $TRUE) {throw 'Test Failure.'} }
+ 
+    - name: Publish ${{ inputs.project_name }}
+      if: ${{ github.event_name != 'pull_request' }}
+      run: dotnet publish ${{ inputs.project_name }} --configuration Release
+
+    - name: Copy appsettings to publish directory
+      run: |
+           cp -r ${GITHUB_WORKSPACE}/.github/workflows/appsettings/${{ inputs.appsettings_path }}/ ${{ inputs.project_name }}/bin/Release/net6.0/publish/
+
+    - name: Compress artifact
+      if: ${{ github.event_name != 'pull_request' }}
+      run: tar -zcf ${{ inputs.project_name }}.tar.gz -C ${{ inputs.project_name }}/bin/Release/net6.0/publish/ .
+
+    - name: Upload artifact ${{ inputs.project_name }}
+      uses: actions/upload-artifact@v2
+      if: ${{ github.event_name != 'pull_request' }}
+      with:
+        name: ${{ inputs.project_name }}
+        path: ${{ inputs.project_path }}/${{ inputs.project_name }}.tar.gz  

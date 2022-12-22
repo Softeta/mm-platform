@@ -1,0 +1,117 @@
+[
+ {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-test",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "170d24e9-54cc-4510-95ab-233c45123177",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__JobsApiUrl",
+    "value": "https://app-mm-job-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CompaniesApiUrl",
+    "value": "https://app-mm-company-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CandidatesApiUrl",
+    "value": "https://app-mm-candidate-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__ElasticSearchApiUrl",
+    "value": "https://func-mm-elastic-search-search-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Cors__AllowedOrigins",
+    "value": "https://backoffice.mmtest2.com;https://witty-desert-093edef03.1.azurestaticapps.net;http://localhost:3000",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "6eba5796-6fd9-4016-89ed-4142fc940fe6",
+    "slotSetting": false
+  },
+  {
+    "name": "StorageAccount__AccountName",
+    "value": "stmmwebtest",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-test-01",
+    "slotSetting": false
+  },
+  {
+    "name": "ElasticSearch__SuggestedCandidatesKey",
+    "value": "IvGW2yAqOyNwxhK-vhqmU3WqshC3mMezG-cJOOw_eeIzAzFucEmUbg==",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__AdministrationSettingsApiUrl",
+    "value": "https://app-mm-administration-settings-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__TagSystemApiUrl",
+    "value": "https://app-mm-tags-test.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "FormRecognizerSettings__Url",
+    "value": "https://fr-mm-candidates-cv-parser.cognitiveservices.azure.com/",
+    "slotSetting": false	
+  },
+  {
+    "name": "FormRecognizerSettings__LinkedInModelId",
+    "value": "95f0ec24-3aa3-4b9d-8c71-3dca6a7b84ff",
+    "slotSetting": false	
+  },
+  {
+    "name": "BlobStorageContainers__CandidateCurriculumVitaesContainer",
+    "value": "candidate-curriculumvitaes",
+    "slotSetting": false	
+  },
+  {
+    "name": "HereSearchApi__Url",
+    "value": "https://geocode.search.hereapi.com/v1/geocode",
+    "slotSetting": false	
+  },
+  {
+    "name": "PrivateStorageAccount__AccountName",
+    "value": "stmmplatformprivatetest",
+    "slotSetting": false	
+  },
+  {
+    "name": "PrivateStorageAccount__ExpirationInMinutes",
+    "value": 15,
+    "slotSetting": false	
+  }
+]

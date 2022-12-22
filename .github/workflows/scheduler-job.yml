@@ -1,0 +1,83 @@
+name: Scheduler Job CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/Scheduler/Scheduler.Job/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/scheduler-job.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_function_app_common.yml
+      - .github/workflows/appsettings/scheduled-job/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/Scheduler/Scheduler.Job/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/scheduler-job.yml
+      - .github/workflows/appsettings/scheduled-job/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/Scheduler
+      project_name: Scheduler.Job
+      appsettings_path: scheduler-job
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-scheduler-job-sand
+        project_name: Scheduler.Job
+        appsettings_json: scheduler-job/scheduler-job-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-scheduler-job-dev
+        project_name: Scheduler.Job
+        appsettings_json: scheduler-job/scheduler-job-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-scheduler-job-test
+        project_name: Scheduler.Job
+        appsettings_json: scheduler-job/scheduler-job-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-scheduler-job-prod
+        project_name: Scheduler.Job
+        appsettings_json: scheduler-job/scheduler-job-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

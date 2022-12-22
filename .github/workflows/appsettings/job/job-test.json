@@ -1,0 +1,97 @@
+[
+  {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-test",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "170d24e9-54cc-4510-95ab-233c45123177",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://mmselfservicecompaniestest.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "mmselfservicecompaniestest.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "4e8363a3-877d-4882-886a-4edd4cb83283",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "6eba5796-6fd9-4016-89ed-4142fc940fe6",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-test-01",
+    "slotSetting": false
+  },
+  {
+    "name": "HereSearchApi__Uri",
+    "value": "https://geocode.search.hereapi.com/v1/geocode",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://mmselfservicecandidatestest.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "mmselfservicecandidatestest.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "e4f79359-fcb7-40d9-acb8-5c1045355f5b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  }
+]

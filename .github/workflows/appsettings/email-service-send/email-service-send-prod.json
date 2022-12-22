@@ -1,0 +1,277 @@
+[
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-prod-01",
+    "slotSetting": false
+  },
+  {
+    "name": "AuthorizationTenantId",
+    "value": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "StorageAccountName",
+    "value": "stmmplatformprivateprod",
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__Url",
+    "value": "https://portal.marchermarkholt.com/myprofile/{0}/verification/{1}",
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__TemplateId__EN",
+    "value": 82,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__TemplateId__DA",
+    "value": 68,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateVerification__TemplateId__SV",
+    "value": 94,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__Url",
+    "value": "https://portal.marchermarkholt.com/findtalent/{0}/{1}/verification/{2}",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__TemplateId__EN",
+    "value": 87,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__TemplateId__DA",
+    "value": 73,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonVerification__TemplateId__SV",
+    "value": 98,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__Url",
+    "value": "https://portal.marchermarkholt.com/myprofile",
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__TemplateId__EN",
+    "value": 83,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__TemplateId__DA",
+    "value": 69,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateWelcome__TemplateId__SV",
+    "value": 95,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateRejected__TemplateId__EN",
+    "value": 112,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateRejected__TemplateId__DA",
+    "value": 72,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateRejected__TemplateId__SV",
+    "value": 86,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__Url",
+    "value": "https://portal.marchermarkholt.com/findtalent",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__TemplateId__EN",
+    "value": 88,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__TemplateId__DA",
+    "value": 75,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonWelcome__TemplateId__SV",
+    "value": 99,
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__Url",
+    "value": "https://portal.marchermarkholt.com/findtalent",
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__TemplateId__EN",
+    "value": 93,
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__TemplateId__DA",
+    "value": 80,
+    "slotSetting": false
+  },
+  {
+    "name": "CompanyRejected__TemplateId__SV",
+    "value": 104,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__Url",
+    "value": "https://portal.marchermarkholt.com/myprofile",
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__TemplateId__EN",
+    "value": 84,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__TemplateId__DA",
+    "value": 70,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidateInvited__TemplateId__SV",
+    "value": 96,
+    "slotSetting": false
+  },
+  {
+    "name": "JobApproved__TemplateId__EN",
+    "value": 90,
+    "slotSetting": false
+  },
+  {
+    "name": "JobApproved__TemplateId__DA",
+    "value": 77,
+    "slotSetting": false
+  },
+  {
+    "name": "JobApproved__TemplateId__SV",
+    "value": 101,
+    "slotSetting": false
+  },
+  {
+    "name": "JobRejected__TemplateId__EN",
+    "value": 92,
+    "slotSetting": false
+  },
+  {
+    "name": "JobRejected__TemplateId__DA",
+    "value": 79,
+    "slotSetting": false
+  },
+  {
+    "name": "JobRejected__TemplateId__SV",
+    "value": 103,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__Url",
+    "value": "https://portal.marchermarkholt.com/findtalent/presentation/shortlist",
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__SignupUrl",
+    "value": "https://portal.marchermarkholt.com/findtalent/signup",
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__TemplateId__EN",
+    "value": 91,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__TemplateId__DA",
+    "value": 78,
+    "slotSetting": false
+  },
+  {
+    "name": "JobCandidatesShortlistActivated__TemplateId__SV",
+    "value": 102,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateAppliedToJob__TemplateId__EN",
+    "value": 85,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateAppliedToJob__TemplateId__DA",
+    "value": 71,
+    "slotSetting": false
+  },
+  {
+    "name": "CandidateAppliedToJob__TemplateId__SV",
+    "value": 97,
+    "slotSetting": false
+  },
+  {
+    "name": "JobSubmitted__TemplateId__EN",
+    "value": 89,
+    "slotSetting": false
+  },
+  {
+    "name": "JobSubmitted__TemplateId__DA",
+    "value": 76,
+    "slotSetting": false
+  },
+  {
+    "name": "JobSubmitted__TemplateId__SV",
+    "value": 100,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__Url",
+    "value": "https://portal.marchermarkholt.com/findtalent/signup",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__TemplateId__EN",
+    "value": 117,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__TemplateId__DA",
+    "value": 119,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByBO__TemplateId__SV",
+    "value": 121,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__Url",
+    "value": "https://portal.marchermarkholt.com/findtalent/signup",
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__TemplateId__EN",
+    "value": 116,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__TemplateId__DA",
+    "value": 118,
+    "slotSetting": false
+  },
+  {
+    "name": "ContactPersonInvitedByClient__TemplateId__SV",
+    "value": 120,
+    "slotSetting": false
+  }
+]

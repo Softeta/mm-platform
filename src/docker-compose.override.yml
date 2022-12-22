@@ -1,0 +1,96 @@
+version: '3.4'
+
+services:
+  backoffice-bff-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - Services__CandidatesApiUrl=http://candidates-api:80
+      - Services__CompaniesApiUrl=http://companies-api:80
+      - Services__JobsApiUrl=http://jobs-api:80
+      - Services__AdministrationSettingsApiUrl=http://administration-settings-api:80
+      - Yarp__Clusters__Job__Destinations__JobRoot__Address=http://jobs-api:80
+      - Yarp__Clusters__JobCandidates__Destinations__JobCandidatesRoot__Address=http://jobs-api:80
+      - Yarp__Clusters__Candidate__Destinations__CandidateRoot__Address=http://candidates-api:80
+      - Yarp__Clusters__CandidateTests__Destinations__CandidateTestsRoot__Address=http://candidates-api:80
+      - Yarp__Clusters__Company__Destinations__CompanyRoot__Address=http://companies-api:80
+      - Yarp__Clusters__AdministrationSettings__Destinations__AdministrationSettingsRoot__Address=http://administration-settings-api:80
+      - PORT=80
+      - AZURE_CLIENT_ID=c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79
+      - AZURE_CLIENT_SECRET=__SECRET__
+      - AZURE_TENANT_ID=baeb372e-3535-4dcd-b14f-898ade9a376b
+      - IsDockerRunning=true
+    ports:
+      - "5101:80"
+
+  frontoffice-bff-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - Services__CandidatesApiUrl=http://candidates-api:80
+      - Services__CompaniesApiUrl=http://companies-api:80
+      - Services__JobsApiUrl=http://jobs-api:80
+      - Yarp__Clusters__Job__Destinations__JobRoot__Address=http://jobs-api:80
+      - Yarp__Clusters__JobCandidates__Destinations__JobCandidatesRoot__Address=http://jobs-api:80
+      - Yarp__Clusters__Candidate__Destinations__CandidateRoot__Address=http://candidates-api:80
+      - Yarp__Clusters__CandidateTests__Destinations__CandidateTestsRoot__Address=http://candidates-api:80
+      - Yarp__Clusters__Company__Destinations__CompanyRoot__Address=http://companies-api:80
+      - Yarp__Clusters__AdministrationSettings__Destinations__AdministrationSettingsRoot__Address=http://administration-settings-api:80
+      - PORT=80
+      - AZURE_CLIENT_ID=c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79
+      - AZURE_CLIENT_SECRET=__SECRET__
+      - AZURE_TENANT_ID=baeb372e-3535-4dcd-b14f-898ade9a376b
+      - IsDockerRunning=true
+    ports:
+      - "5201:80"  
+
+  candidates-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionStrings__CandidateDatabase=Server=tcp:sql_mm_local,1433;Database=mm-candidate-local;User Id=sa;Password=Admin123!;
+      - PORT=80
+      - AZURE_CLIENT_ID=c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79
+      - AZURE_CLIENT_SECRET=__SECRET__
+      - AZURE_TENANT_ID=baeb372e-3535-4dcd-b14f-898ade9a376b
+      - IsDockerRunning=true
+    ports:
+      - "5011:80"
+
+  companies-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionStrings__CompanyDatabase=Server=tcp:sql_mm_local,1433;Database=mm-company-local;User Id=sa;Password=Admin123!;
+      - PORT=80
+      - AZURE_CLIENT_ID=c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79
+      - AZURE_CLIENT_SECRET=__SECRET__
+      - AZURE_TENANT_ID=baeb372e-3535-4dcd-b14f-898ade9a376b
+      - IsDockerRunning=true
+    ports:
+      - "5012:80"
+
+  jobs-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionStrings__JobDatabase=Server=tcp:sql_mm_local,1433;Database=mm-job-local;User Id=sa;Password=Admin123!;
+      - PORT=80
+      - AZURE_CLIENT_ID=c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79
+      - AZURE_CLIENT_SECRET=__SECRET__
+      - AZURE_TENANT_ID=baeb372e-3535-4dcd-b14f-898ade9a376b
+      - IsDockerRunning=true
+    ports:
+      - "5013:80"
+
+  administration-settings-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - PORT=80
+      - AZURE_CLIENT_ID=c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79
+      - AZURE_CLIENT_SECRET=__SECRET__
+      - AZURE_TENANT_ID=baeb372e-3535-4dcd-b14f-898ade9a376b
+      - IsDockerRunning=true
+    ports:
+      - "5014:80"

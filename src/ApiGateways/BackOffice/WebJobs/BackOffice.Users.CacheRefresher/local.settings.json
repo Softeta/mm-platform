@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "StorageAccountName": "stmmweblocal",
+    "PublicStorageAccountName": "stmmplatformpubliclocal",
+    "GlobalKeyVault": "kv-mm-platform-local",
+    "AuthorizationTenantId": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "AuthorizationClientId": "623e2544-8c54-41b8-9f16-5d0a3025b2c6",
+    "UserPicturesContainer": "backoffice-userpictures",
+    "GroupNames": "[\"MM Back-office Researchers\", \"MM Back-office Consultants\", \"MM Back-office Admins\"]"
+  }
+}

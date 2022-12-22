@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "GlobalKeyVault": "kv-mm-platform-local",
+    "AZURE_CLIENT_ID": "c1ebd06c-78c3-48f9-b7c3-1fe5aede0f79",
+    "AZURE_CLIENT_SECRET": "__SECRET__",
+    "AZURE_TENANT_ID": "baeb372e-3535-4dcd-b14f-898ade9a376b"
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "StorageAccountName",
+    "value": "stmmwebprod",
+    "slotSetting": false
+  },
+  {
+    "name": "PublicStorageAccountName",
+    "value": "stmmplatformpublicprod",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-prod-01",
+    "slotSetting": false
+  },
+  {
+    "name": "AuthorizationTenantId",
+    "value": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AuthorizationClientId",
+    "value": "28f00fa0-5cbf-4607-b430-566d4c679edc",
+    "slotSetting": false
+  },
+  {
+    "name": "UserPicturesContainer",
+    "value": "backoffice-userpictures",
+    "slotSetting": false
+  },
+  {
+    "name": "GroupNames",
+    "value": "[\"MM Back-office Researchers PROD\", \"MM Back-office Consultants PROD\", \"MM Back-office Admins PROD\"]",
+    "slotSetting": false
+  }
+]

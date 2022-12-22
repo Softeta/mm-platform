@@ -1,0 +1,62 @@
+{
+  "Yarp": {
+    "Clusters": {
+      "Job": {
+        "Destinations": {
+          "JobRoot": {
+            "Address": "https://localhost:7083"
+          }
+        }
+      },
+      "JobCandidates": {
+        "Destinations": {
+          "JobCandidatesRoot": {
+            "Address": "https://localhost:7083"
+          }
+        }
+      },
+      "Candidate": {
+        "Destinations": {
+          "CandidateRoot": {
+            "Address": "https://localhost:7206"
+          }
+        }
+      },
+      "CandidateTests": {
+        "Destinations": {
+          "CandidateTestsRoot": {
+            "Address": "https://localhost:7206"
+          }
+        }
+      },
+      "Company": {
+        "Destinations": {
+          "CompanyRoot": {
+            "Address": "https://localhost:7277"
+          }
+        }
+      },
+      "Skill": {
+        "Destinations": {
+          "SkillRoot": {
+            "Address": "https://app-mm-tags-dev.azurewebsites.net"
+          }
+        }
+      },
+      "JobPosition": {
+        "Destinations": {
+          "JobPositionRoot": {
+            "Address": "https://app-mm-tags-dev.azurewebsites.net"
+          }
+        }
+      },
+      "AdministrationSettings": {
+        "Destinations": {
+          "AdministrationSettingsRoot": {
+            "Address": "https://localhost:7160"
+          }
+        }
+      }
+    }
+  }
+}

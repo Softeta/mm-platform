@@ -1,0 +1,95 @@
+name: Candidates API CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/Candidate/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - src/BuildingBlocks/Models/Custom.Attributes/**
+      - src/BuildingBlocks/Models/Contracts.Shared/**
+      - src/BuildingBlocks/Models/Contracts.Candidate/**
+      - .github/workflows/candidates-api.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_common.yml
+      - .github/workflows/appsettings/candidate/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/Candidate/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - src/BuildingBlocks/Models/Custom.Attributes/**
+      - src/BuildingBlocks/Models/Contracts.Shared/**
+      - src/BuildingBlocks/Models/Contracts.Candidate/**
+      - .github/workflows/candidates-api.yml
+      - .github/workflows/appsettings/candidate/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/Candidate
+      project_name: Candidates.API
+      appsettings_path: candidate
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-candidate-sand
+        azure_web_app_slot_name: production
+        project_name: Candidates.API
+        appsettings_json: candidate/candidate-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-candidate-dev
+        azure_web_app_slot_name: production
+        project_name: Candidates.API
+        appsettings_json: candidate/candidate-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+  
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-candidate-test
+        azure_web_app_slot_name: stage
+        project_name: Candidates.API
+        appsettings_json: candidate/candidate-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-candidate-prod
+        azure_web_app_slot_name: stage
+        project_name: Candidates.API
+        appsettings_json: candidate/candidate-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

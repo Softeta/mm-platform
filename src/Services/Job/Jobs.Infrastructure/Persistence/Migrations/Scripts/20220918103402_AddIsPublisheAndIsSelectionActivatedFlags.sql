@@ -1,0 +1,1 @@
+﻿UPDATE [jobs].[Jobs] SET [IsSelectionActivated] = 1 WHERE [Stage] = 'CandidateSelection' OR [Stage] = 'ShortListed'

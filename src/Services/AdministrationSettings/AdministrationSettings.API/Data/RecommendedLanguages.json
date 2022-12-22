@@ -1,0 +1,37 @@
+[
+  {
+    "Id": "48BA744E-E27E-F17D-24AD-A233F37A91A6",
+    "Code": "da",
+    "Name": "Danish"
+  },
+  {
+    "Id": "751F0274-D72A-2BF7-A17C-DBF9475C827B",
+    "Code": "sv",
+    "Name": "Swedish"
+  },
+  {
+    "Id": "58D9DD79-8AB4-15CE-3E40-207A3650E6EE",
+    "Code": "no",
+    "Name": "Norwegian"
+  },
+  {
+    "Id": "C30F3F07-C30B-5BDA-8BD6-8F56B1CA66AA",
+    "Code": "en",
+    "Name": "English"
+  },
+  {
+    "Id": "3589FF67-D92E-9662-D39B-AD7B3CD43B93",
+    "Code": "fr",
+    "Name": "French"
+  },
+  {
+    "Id": "7B24CCBA-E479-D721-88AE-DCBBCC8464EF",
+    "Code": "de",
+    "Name": "German"
+  },
+  {
+    "Id": "B60AEAED-B7BE-18ED-D07A-B7B66E79EFAF",
+    "Code": "es",
+    "Name": "Spanish"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "EmailService.Sync": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7153"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 31085,
+      "useSSL": false
+    }
+  }
+}

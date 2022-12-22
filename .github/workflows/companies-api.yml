@@ -1,0 +1,95 @@
+name: Companies API CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/Company/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - src/BuildingBlocks/Models/Custom.Attributes/**
+      - src/BuildingBlocks/Models/Contracts.Shared/**
+      - src/BuildingBlocks/Models/Contracts.Company/**
+      - .github/workflows/companies-api.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_common.yml
+      - .github/workflows/appsettings/company/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/Company/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - src/BuildingBlocks/Models/Custom.Attributes/**
+      - src/BuildingBlocks/Models/Contracts.Shared/**
+      - src/BuildingBlocks/Models/Contracts.Company/**
+      - .github/workflows/companies-api.yml
+      - .github/workflows/appsettings/company/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/Company
+      project_name: Companies.API
+      appsettings_path: company
+
+  sand:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-company-sand
+        azure_web_app_slot_name: production
+        project_name: Companies.API
+        appsettings_json: company/company-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-company-dev
+        azure_web_app_slot_name: production
+        project_name: Companies.API
+        appsettings_json: company/company-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-company-test
+        azure_web_app_slot_name: stage
+        project_name: Companies.API
+        appsettings_json: company/company-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_common.yml
+      with:
+        azure_web_app_name: app-mm-company-prod
+        azure_web_app_slot_name: stage
+        project_name: Companies.API
+        appsettings_json: company/company-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

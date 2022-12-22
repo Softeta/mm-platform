@@ -1,0 +1,85 @@
+name: BackOffice Users Cache Refresh WebJob CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/ApiGateways/BackOffice/WebJobs/BackOffice.Users.CacheRefresher/**
+      - src/ApiGateways/BackOffice/BackOffice.Shared/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/back-office-users-cache-refresher.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_function_app_common.yml
+      - .github/workflows/appsettings/backoffice-users-casherefesher/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/ApiGateways/BackOffice/WebJobs/BackOffice.Users.CacheRefresher/**
+      - src/ApiGateways/BackOffice/BackOffice.Shared/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/back-office-users-cache-refresher.yml
+      - .github/workflows/appsettings/backoffice-users-casherefesher/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/ApiGateways/BackOffice/WebJobs
+      project_name: BackOffice.Users.CacheRefresher
+      appsettings_path: backoffice-users-casherefesher
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-back-office-users-cache-refresher-sand
+        project_name: BackOffice.Users.CacheRefresher
+        appsettings_json: backoffice-users-casherefesher/backoffice-users-casherefesher-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-back-office-users-cache-refresher-dev
+        project_name: BackOffice.Users.CacheRefresher
+        appsettings_json: backoffice-users-casherefesher/backoffice-users-casherefesher-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-back-office-users-cache-refresher-test
+        project_name: BackOffice.Users.CacheRefresher
+        appsettings_json: backoffice-users-casherefesher/backoffice-users-casherefesher-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-back-office-users-cache-refresher-prod
+        project_name: BackOffice.Users.CacheRefresher
+        appsettings_json: backoffice-users-casherefesher/backoffice-users-casherefesher-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

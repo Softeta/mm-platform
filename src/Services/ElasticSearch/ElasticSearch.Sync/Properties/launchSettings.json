@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ElasticSearch.Sync": {
+      "commandName": "Project",
+      "commandLineArgs": "start --port 7075"
+    }
+  }
+}

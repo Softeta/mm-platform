@@ -1,0 +1,237 @@
+[
+  {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-dev",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "d29bf227-1861-4294-953d-c0845f5d5894",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://marchermarholtcandidates.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "marchermarholtcandidates.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "b18cc587-0342-4ae8-9ae9-8f2d77c941c5",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__TenantId",
+    "value": "34f68385-8572-48a3-80f3-22d6d81c79b5",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://marchermarholtcompanies.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "marchermarholtcompanies.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "e8088e65-b0a3-4023-9da9-7ab397636546",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__TenantId",
+    "value": "f12637ab-5f4b-46a6-8a95-fd08676e1b12",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "4f1db34f-5816-430b-a818-2110bd7bb2ab",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-dev-01",
+    "slotSetting": false
+  },
+  {
+    "name": "PublicStorageAccount__AccountName",
+    "value": "stmmplatformpublicdev",
+    "slotSetting": false
+  },
+  {
+    "name": "PrivateStorageAccount__AccountName",
+    "value": "stmmplatformprivatedev",
+    "slotSetting": false
+  },
+  {
+    "name": "PrivateStorageAccount__ExpirationInMinutes",
+    "value": 15,
+    "slotSetting": false
+  },
+  {
+    "name": "HereSearchApi__Uri",
+    "value": "https://geocode.search.hereapi.com/v1/geocode",
+    "slotSetting": false
+  },
+  {
+    "name": "RegisteredCandidateSettings__ExpiresInDays",
+    "value": 7,
+    "slotSetting": false
+  },
+  {
+    "name": "CacheSettings__FileExpiresInMinutes",
+    "value": 720,
+    "slotSetting": false
+  },
+  {
+    "name": "ImageSettings__MaxSizeInKilobytes",
+    "value": "1024",
+    "slotSetting": false
+  },
+  {
+    "name": "ImageSettings__SupportedTypes",
+    "value": "[string(parameters('image/jpeg', 'image/png', 'image/svg'))]",
+    "slotSetting": false
+  },
+  {
+    "name": "TalogyApi__AuthUrl",
+    "value": "https://livecluster.cubiksconnect.com/connect/token",
+    "slotSetting": false
+  },
+  {
+    "name": "TalogyApi__Url",
+    "value": "https://api.cubiksconnect.com",
+    "slotSetting": false
+  },
+  {
+    "name": "TalogyApi__ClientId",
+    "value": "ConnectApi-Direct-MarcherMarkholt-Test",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__PackageTypes__Logic",
+    "value": "Marcher Markholt Logiks",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__PackageTypes__Personality",
+    "value": "General PAPI3NSL",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiDynamicWheel__Id",
+    "value": "MarcherMarkholt-PAPI3NSL-General-Dynamic",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiDynamicWheel__FileFormat",
+    "value": "text/html",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiGeneralFeedback__Id",
+    "value": "MarcherMarkholt-PAPI3NSL-General-Feedback",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiGeneralFeedback__FileFormat",
+    "value": "application/pdf",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiGeneralWheel__Id",
+    "value": "MarcherMarkholt-PAPI3NSL-General-Wheel",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__PapiGeneralWheel__FileFormat",
+    "value": "application/pdf",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__LgiGeneralFeedback__Id",
+    "value": "Logiks_Candidate_Feedback_Report-3P7RG",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__ReportTypes__LgiGeneralFeedback__FileFormat",
+    "value": "application/pdf",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__SupportedLocales__EN",
+    "value": "en-GB",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__SupportedLocales__DA",
+    "value": "da-DK",
+    "slotSetting": false
+  },
+  {
+    "name": "Talogy__DefaultLocale",
+    "value": "en-GB",
+    "slotSetting": false
+  },
+  {
+    "name": "SelfService__ApiUrl",
+    "value": "https://api.mmtest1.com",
+    "slotSetting": false
+  },
+  {
+    "name": "SelfService__Website__Url",
+    "value": "https://portal.mmtest1.com",
+    "slotSetting": false
+  },
+  {
+    "name": "SelfService__Website__TestsPath",
+    "value": "myprofile/tests",
+    "slotSetting": false
+  }
+]

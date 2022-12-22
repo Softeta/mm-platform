@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Infrastructure\API.WebClients\API.WebClients.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Infrastructure\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Models\Contracts.Job\Contracts.Job.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Models\Contracts.Shared\Contracts.Shared.csproj" />
+    <ProjectReference Include="..\Jobs.Domain\Jobs.Domain.csproj" />
+    <ProjectReference Include="..\Jobs.Infrastructure\Jobs.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Queries\JobCandidatesFilters\" />
+  </ItemGroup>
+
+</Project>

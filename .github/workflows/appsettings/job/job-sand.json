@@ -1,0 +1,107 @@
+[
+  {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-sand",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "5b69cba7-c95c-4769-8a5d-af0886130a3b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://marchermarholtcompanies.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "marchermarholtcompanies.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "e8088e65-b0a3-4023-9da9-7ab397636546",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Default",
+    "value": "Debug",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Microsoft__AspNetCore",
+    "value": "Debug",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "4d275769-afc5-491e-ad80-9447b40863cc",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-sand-01",
+    "slotSetting": false
+  },
+  {
+    "name": "HereSearchApi__Uri",
+    "value": "https://geocode.search.hereapi.com/v1/geocode",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://marchermarholtcandidates.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "marchermarholtcandidates.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "b18cc587-0342-4ae8-9ae9-8f2d77c941c5",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  }
+]

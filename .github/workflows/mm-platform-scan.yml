@@ -1,0 +1,55 @@
+name: All services SonarCloud scan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mm_backoffice:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    uses: ./.github/workflows/sonarcloud_scan.yml
+    with:
+      project_path: src/ApiGateways/BackOffice
+      project_name: BackOffice.Bff.API
+      project_sonarcloud_key: softeta_mm_backoffice
+    secrets:
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
+      
+  mm_frontoffice:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    uses: ./.github/workflows/sonarcloud_scan.yml
+    with:
+      project_path: src/ApiGateways/FrontOffice
+      project_name: FrontOffice.Bff.API
+      project_sonarcloud_key: softeta_mm_frontoffice
+    secrets:
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
+
+  mm_jobs:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    uses: ./.github/workflows/sonarcloud_scan.yml
+    with:
+      project_path: src/Services/Job
+      project_name: Jobs.API
+      project_sonarcloud_key: softeta_mm_jobs
+    secrets:
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
+      
+  mm_companies:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    uses: ./.github/workflows/sonarcloud_scan.yml
+    with:
+      project_path: src/Services/Company
+      project_name: Companies.API
+      project_sonarcloud_key: softeta_mm_companies
+    secrets:
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
+
+  mm_candidates:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    uses: ./.github/workflows/sonarcloud_scan.yml
+    with:
+      project_path: src/Services/Candidate
+      project_name: Candidates.API
+      project_sonarcloud_key: softeta_mm_candidates
+    secrets:
+      sonar_token: ${{ secrets.SONAR_TOKEN }}

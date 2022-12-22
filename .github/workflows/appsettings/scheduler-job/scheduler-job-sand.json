@@ -1,0 +1,12 @@
+[
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-sand-01",
+    "slotSetting": false
+  },
+  {
+    "name": "AuthorizationTenantId",
+    "value": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  }
+]

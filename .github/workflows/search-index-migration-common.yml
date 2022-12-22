@@ -1,0 +1,49 @@
+name: Reusable Azure Cognitive Search index migration 
+
+on:
+  workflow_call:
+    inputs:
+      search_service_name:
+        required: true
+        type: string
+      index_name:
+        required: true
+        type: string
+      file_path:
+        required: true
+        type: string
+    secrets:
+      api_key:
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: azure-cognitive-search
+    steps:
+      - uses: actions/checkout@v2
+      - name: Migrate Azure Cognitive Search index
+        working-directory: azure-cognitive-search
+        run: |
+          body=`cat ./${FILE_PATH}`
+
+          STATUS=$(curl --silent --output /dev/stderr --write-out "%{http_code}" \
+          -X PUT -d "${body}" \
+          -H "api-key: $API_KEY" \
+          -H "Content-Type: application/json" \
+          https://${SEARCH_SERVICE_NAME}.search.windows.net/indexes/${INDEX_NAME}?api-version=2020-06-30) 
+
+          if [ $STATUS == '201' ] || [ $STATUS == '204' ]
+          then
+            echo "Azure Cognitive Search index $INDEX_NAME was updated with StatusCode=$STATUS"
+          else
+            echo "Azure Cognitive Search index $INDEX_NAME update failed with StatusCode=$STATUS"
+            exit 1
+          fi
+        env:
+          SEARCH_SERVICE_NAME: ${{ inputs.search_service_name }}
+          INDEX_NAME: ${{ inputs.index_name }}
+          FILE_PATH: ${{ inputs.file_path }}
+          API_KEY: ${{ secrets.api_key }}

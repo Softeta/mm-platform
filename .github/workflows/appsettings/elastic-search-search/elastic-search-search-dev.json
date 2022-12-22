@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CognitiveSearchUrl",
+    "value": "https://srch-mm-elastic-search-dev.search.windows.net",
+    "slotSetting": false
+  },
+  {
+    "name": "CognitiveSearchCandidatesIndex",
+    "value": "candidates",
+    "slotSetting": false
+  },
+  {
+    "name": "CognitiveSearchJobsIndex",
+    "value": "jobs",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-dev-01",
+    "slotSetting": false
+  },
+  {
+    "name": "AuthorizationTenantId",
+    "value": "baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "DateTimeFormat",
+    "value": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+    "slotSetting": false
+  }
+]

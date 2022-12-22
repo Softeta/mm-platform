@@ -1,0 +1,122 @@
+[
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://mmselfservicecandidatesprod.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "mmselfservicecandidatesprod.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "cc635bcc-0172-4d96-8fd8-e18d3105b7ff",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://mmselfservicecompaniesprod.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "mmselfservicecompaniesprod.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "24c5c0a1-77f8-42c4-a801-c61154132f06",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__TenantId",
+    "value": "7f0bc358-d1ed-4dc9-93e5-98e038063cb3",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Default",
+    "value": "Information",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Microsoft__AspNetCore",
+    "value": "Warning",
+    "slotSetting": false
+  },
+  {
+    "name": "AllowedHosts",
+    "value": "*",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "54539bf4-7ce6-4fca-83c5-9a56248379a3",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-prod-01",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__JobsApiUrl",
+    "value": "https://app-mm-job-prod.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CompaniesApiUrl",
+    "value": "https://app-mm-company-prod.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CandidatesApiUrl",
+    "value": "https://app-mm-candidate-prod.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__ElasticSearchApiUrl",
+    "value": "https://func-mm-elastic-search-search-prod.azurewebsites.net/",
+    "slotSetting": false   
+  },
+  {
+    "name": "Cors__AllowedOrigins",
+    "value": "https://portal.marchermarkholt.com;https://lively-glacier-0943b1803.1.azurestaticapps.net",
+    "slotSetting": false
+  },
+  {
+    "name": "SwaggerOptions__IsTurnedOn",
+    "value": false,
+    "slotSetting": false
+  },
+  {
+    "name": "SwaggerOptions__ApplicationId",
+    "value": "39c379ad-93ee-4638-bdb9-41c3478b701b",
+    "slotSetting": false
+  },
+  {
+    "name": "ElasticSearch__RecommendedJobsKey",
+    "value": "Uyk37t9DoOAjsfvfkqOk6IaJdAjOYTeSkIOeeK-fFL-yAzFuFMwi9g==",
+    "slotSetting": false
+  }
+]

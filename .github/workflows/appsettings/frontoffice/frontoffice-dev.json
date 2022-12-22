@@ -1,0 +1,122 @@
+[
+  {
+    "name": "AzureAdB2CCandidates__Instance",
+    "value": "https://marchermarholtcandidates.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Domain",
+    "value": "marchermarholtcandidates.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__ClientId",
+    "value": "b18cc587-0342-4ae8-9ae9-8f2d77c941c5",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__SignUpSignInPolicyId",
+    "value": "B2C_1_candidate_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCandidates__Scope",
+    "value": "app-mm-front-office-candidate/FrontOffice.Candidate",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Instance",
+    "value": "https://marchermarholtcompanies.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__Domain",
+    "value": "marchermarholtcompanies.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__ClientId",
+    "value": "e8088e65-b0a3-4023-9da9-7ab397636546",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__TenantId",
+    "value": "f12637ab-5f4b-46a6-8a95-fd08676e1b12",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2CCompanies__SignUpSignInPolicyId",
+    "value": "B2C_1_company_signin_user_flow",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Default",
+    "value": "Information",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Microsoft__AspNetCore",
+    "value": "Warning",
+    "slotSetting": false
+  },
+  {
+    "name": "AllowedHosts",
+    "value": "*",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "a4e0e549-4b48-4b2a-a0c4-73ccaf0cd788",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-dev-01",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__JobsApiUrl",
+    "value": "https://app-mm-job-dev.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CompaniesApiUrl",
+    "value": "https://app-mm-company-dev.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CandidatesApiUrl",
+    "value": "https://app-mm-candidate-dev.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__ElasticSearchApiUrl",
+    "value": "https://func-mm-elastic-search-search-dev.azurewebsites.net/",
+    "slotSetting": false   
+  },
+  {
+    "name": "Cors__AllowedOrigins",
+    "value": "https://portal.mmtest1.com;https://mango-sand-033b47b03.1.azurestaticapps.net;http://localhost:3000;http://localhost:3001",
+    "slotSetting": false
+  },
+  {
+    "name": "SwaggerOptions__ApplicationId",
+    "value": "23bbfb45-d097-46a6-8b74-ee8a1b2db287",
+    "slotSetting": false
+  },
+  {
+    "name": "ElasticSearch__RecommendedJobsKey",
+    "value": "JbL0motQ3XGm4MnnG9_5cCcFn5faJuvzVBYGd7V0AqxZAzFukKBKgQ==",
+    "slotSetting": false
+  }
+]

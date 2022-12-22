@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Scheduler.Job": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7222"
+    }
+  }
+}

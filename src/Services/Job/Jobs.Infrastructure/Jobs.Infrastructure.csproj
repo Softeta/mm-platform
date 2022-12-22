@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Persistence\Migrations\Scripts\20220821191116_UpdateJobStage_HiredToSuccessful.sql" />
+    <None Remove="Persistence\Migrations\Scripts\20220902133156_ChangeSeniorityLevelNames.sql" />
+    <None Remove="Persistence\Migrations\Scripts\20220905132615_AddPointToCoordinates.sql" />
+    <None Remove="Persistence\Migrations\Scripts\20220918103402_AddIsPublisheAndIsSelectionActivatedFlags.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Persistence\Migrations\Scripts\20220918103402_AddIsPublisheAndIsSelectionActivatedFlags.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Persistence\Migrations\Scripts\20220821191116_UpdateJobStage_HiredToSuccessful.sql" />
+    <EmbeddedResource Include="Persistence\Migrations\Scripts\20220902133156_ChangeSeniorityLevelNames.sql" />
+    <EmbeddedResource Include="Persistence\Migrations\Scripts\20220905132615_AddPointToCoordinates.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Infrastructure\Api.Customization\API.Customization.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Infrastructure\Persistence.Customization\Persistence.Customization.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Models\Domain.Seedwork\Domain.Seedwork.csproj" />
+    <ProjectReference Include="..\Jobs.Domain\Jobs.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

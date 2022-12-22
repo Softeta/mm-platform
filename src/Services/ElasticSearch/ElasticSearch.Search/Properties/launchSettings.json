@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "ElasticSearch.Search": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 7041,
+      "useSSL": false
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "Yarp": {
+    "Routes": {
+      "Jobs": {
+        "ClusterId": "Job",
+        "Match": {
+          "Path": "api/v1/jobs/{**catch-all}"
+        }
+      },
+      "JobCandidates": {
+        "ClusterId": "JobCandidates",
+        "Match": {
+          "Path": "api/v1/job-candidates/{**catch-all}"
+        }
+      },
+      "Candidates": {
+        "ClusterId": "Candidate",
+        "Match": {
+          "Path": "api/v1/candidates/{**catch-all}"
+        }
+      },
+      "CandidateTests": {
+        "ClusterId": "CandidateTests",
+        "Match": {
+          "Path": "api/v1/candidate-tests/{**catch-all}"
+        }
+      },
+      "Companies": {
+        "ClusterId": "Company",
+        "Match": {
+          "Path": "api/v1/companies/{**catch-all}"
+        }
+      },
+      "Skills": {
+        "ClusterId": "Skill",
+        "Match": {
+          "Path": "api/v1/skills/{**catch-all}"
+        }
+      },
+      "JobPositions": {
+        "ClusterId": "JobPosition",
+        "Match": {
+          "Path": "api/v1/job-positions/{**catch-all}"
+        }
+      },
+      "AdministrationSettings": {
+        "ClusterId": "AdministrationSettings",
+        "Match": {
+          "Path": "api/v1/{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "Job": {
+        "Destinations": {
+          "JobRoot": {
+            "Address": "https://app-mm-job-dev.azurewebsites.net"
+          }
+        }
+      },
+      "JobCandidates": {
+        "Destinations": {
+          "JobCandidatesRoot": {
+            "Address": "https://app-mm-job-dev.azurewebsites.net"
+          }
+        }
+      },
+      "Candidate": {
+        "Destinations": {
+          "CandidateRoot": {
+            "Address": "https://app-mm-candidate-dev.azurewebsites.net"
+          }
+        }
+      },
+      "CandidateTests": {
+        "Destinations": {
+          "CandidateTestsRoot": {
+            "Address": "https://app-mm-candidate-dev.azurewebsites.net"
+          }
+        }
+      },
+      "Company": {
+        "Destinations": {
+          "CompanyRoot": {
+            "Address": "https://app-mm-company-dev.azurewebsites.net"
+          }
+        }
+      },
+      "Skill": {
+        "Destinations": {
+          "SkillRoot": {
+            "Address": "https://app-mm-tags-dev.azurewebsites.net"
+          }
+        }
+      },
+      "JobPosition": {
+        "Destinations": {
+          "JobPositionRoot": {
+            "Address": "https://app-mm-tags-dev.azurewebsites.net"
+          }
+        }
+      },
+      "AdministrationSettings": {
+        "Destinations": {
+          "AdministrationSettingsRoot": {
+            "Address": "https://app-mm-administration-settings-dev.azurewebsites.net"
+          }
+        }
+      }
+    }
+  }
+}

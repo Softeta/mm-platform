@@ -1,0 +1,117 @@
+name: Azure Cognitive Search index migration
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - local
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  deploy-candidates-index-local:
+    if: ${{ github.event.inputs.environment == 'local' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-local
+      index_name: candidates
+      file_path: candidates-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_LOCAL }}
+    
+  deploy-candidates-index-dev:
+    if: ${{ github.event.inputs.environment == 'dev' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-dev
+      index_name: candidates
+      file_path: candidates-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_DEV }}
+  
+  deploy-candidates-index-test:
+    if: ${{ github.event.inputs.environment == 'test' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-test
+      index_name: candidates
+      file_path: candidates-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_TEST }}
+    
+  deploy-candidates-index-sand:
+    if: ${{ github.event.inputs.environment == 'sand' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-sand
+      index_name: candidates
+      file_path: candidates-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_SAND }}
+      
+  deploy-candidates-index-prod:
+    if: ${{ github.event.inputs.environment == 'prod' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-prod
+      index_name: candidates
+      file_path: candidates-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_PROD }}
+
+  deploy-jobs-index-local:
+    if: ${{ github.event.inputs.environment == 'local' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-local
+      index_name: jobs
+      file_path: jobs-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_LOCAL }}
+      
+  deploy-jobs-index-dev:
+    if: ${{ github.event.inputs.environment == 'dev' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-dev
+      index_name: jobs
+      file_path: jobs-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_DEV }}
+  
+  deploy-jobs-index-test:
+    if: ${{ github.event.inputs.environment == 'test' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-test
+      index_name: jobs
+      file_path: jobs-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_TEST }}
+    
+  deploy-jobs-index-sand:
+    if: ${{ github.event.inputs.environment == 'sand' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-sand
+      index_name: jobs
+      file_path: jobs-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_SAND }}
+      
+  deploy-jobs-index-prod:
+    if: ${{ github.event.inputs.environment == 'prod' }}
+    uses: ./.github/workflows/search-index-migration-common.yml
+    with:
+      search_service_name: srch-mm-elastic-search-prod
+      index_name: jobs
+      file_path: jobs-index.json
+    secrets:
+      api_key: ${{ secrets.AZURE_SEARCH_API_KEY_PROD }}

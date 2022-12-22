@@ -1,0 +1,947 @@
+[
+  {
+    "Id": "A2303630-B761-176F-C993-66E3B229DE84",
+    "Code": "aa",
+    "Name": "Afar"
+  },
+  {
+    "Id": "1AB56D69-DCEC-9F10-66BD-F763E3D98A4D",
+    "Code": "ab",
+    "Name": "Abkhazian"
+  },
+  {
+    "Id": "5089D791-5328-FC2D-3E77-B3F1272A0DB7",
+    "Code": "af",
+    "Name": "Afrikaans"
+  },
+  {
+    "Id": "74AA632D-130E-08E5-039F-1AB73638DF73",
+    "Code": "ak",
+    "Name": "Akan"
+  },
+  {
+    "Id": "D4E9021A-973E-C132-54A3-F22D95BE2993",
+    "Code": "am",
+    "Name": "Amharic"
+  },
+  {
+    "Id": "97ED8926-C653-9515-EB99-482E92D3E7BE",
+    "Code": "ar",
+    "Name": "Arabic"
+  },
+  {
+    "Id": "A9E9DA56-F454-21EC-943B-1D4EA5ED6171",
+    "Code": "an",
+    "Name": "Aragonese"
+  },
+  {
+    "Id": "10F63400-053E-5C3C-610C-18E7B8C015E8",
+    "Code": "as",
+    "Name": "Assamese"
+  },
+  {
+    "Id": "049C2DFD-8EC2-490A-C04D-B1BC09DBF945",
+    "Code": "av",
+    "Name": "Avaric"
+  },
+  {
+    "Id": "38008748-3206-FC86-96E1-6BF5F0A77E7C",
+    "Code": "ae",
+    "Name": "Avestan"
+  },
+  {
+    "Id": "13D06B20-504B-C0A0-7337-B700932B3FBA",
+    "Code": "ay",
+    "Name": "Aymara"
+  },
+  {
+    "Id": "1DD31CBB-60B1-ABD0-3A1D-9775AD6B1167",
+    "Code": "az",
+    "Name": "Azerbaijani"
+  },
+  {
+    "Id": "EEA038BA-B8E3-C610-9FC3-202796BA59AB",
+    "Code": "ba",
+    "Name": "Bashkir"
+  },
+  {
+    "Id": "3F604056-6B43-4D29-12BA-83FCDA7D2735",
+    "Code": "bm",
+    "Name": "Bambara"
+  },
+  {
+    "Id": "A2500A4A-A496-7682-401C-662F9729AC26",
+    "Code": "be",
+    "Name": "Belarusian"
+  },
+  {
+    "Id": "FC10DF59-9493-7D06-0B87-85D29D66676E",
+    "Code": "bn",
+    "Name": "Bengali"
+  },
+  {
+    "Id": "5FFEA58E-36C8-D1D3-DBA5-75D9A2DE91EA",
+    "Code": "bh",
+    "Name": "Bihari"
+  },
+  {
+    "Id": "A4D85729-85F0-B407-AA74-3C79CDA3480C",
+    "Code": "bi",
+    "Name": "Bislama"
+  },
+  {
+    "Id": "83968A4C-AC3A-9B25-E204-1B09519E500A",
+    "Code": "bo",
+    "Name": "Tibetan"
+  },
+  {
+    "Id": "02DE5372-14CE-B277-D4F8-88AB6E069E55",
+    "Code": "bs",
+    "Name": "Bosnian"
+  },
+  {
+    "Id": "35E2A4F9-4122-E8A6-32F6-CCDAA90FA676",
+    "Code": "br",
+    "Name": "Breton"
+  },
+  {
+    "Id": "C293E507-427D-D78B-2626-AF27BC261213",
+    "Code": "bg",
+    "Name": "Bulgarian"
+  },
+  {
+    "Id": "EFBFE53D-198E-A734-3306-4AD518F9DE8E",
+    "Code": "ca",
+    "Name": "Catalan"
+  },
+  {
+    "Id": "C7B26C4E-22B2-DC92-DF3B-CF2B67D2765C",
+    "Code": "cs",
+    "Name": "Czech"
+  },
+  {
+    "Id": "83FB5471-20FD-9D2D-AB84-6F84A7EFAF89",
+    "Code": "ch",
+    "Name": "Chamorro"
+  },
+  {
+    "Id": "F7D69B3E-B5C3-CF60-D44A-584B39E7EF5C",
+    "Code": "ce",
+    "Name": "Chechen"
+  },
+  {
+    "Id": "8AAF3846-0F0D-53D3-8774-8E90D77808BC",
+    "Code": "cu",
+    "Name": "Church Slavic"
+  },
+  {
+    "Id": "C04F0BD1-C6F2-ACA6-8CD1-CB87367B2774",
+    "Code": "cv",
+    "Name": "Chuvash"
+  },
+  {
+    "Id": "6BB671BB-5411-5732-DD1A-21C1CE6404D0",
+    "Code": "kw",
+    "Name": "Cornish"
+  },
+  {
+    "Id": "87D25AB3-7CEC-A913-5F54-D475E6991B10",
+    "Code": "co",
+    "Name": "Corsican"
+  },
+  {
+    "Id": "C0B2A0BE-FEFA-71B8-D5B4-1577F88459DA",
+    "Code": "cr",
+    "Name": "Cree"
+  },
+  {
+    "Id": "C6022737-393B-C63A-F097-4062901F4C70",
+    "Code": "cs",
+    "Name": "Czech"
+  },
+  {
+    "Id": "48BA744E-E27E-F17D-24AD-A233F37A91A6",
+    "Code": "da",
+    "Name": "Danish"
+  },
+  {
+    "Id": "CA7D2AF2-6C07-6472-CA2A-55865AACCA37",
+    "Code": "dv",
+    "Name": "Divehi"
+  },
+  {
+    "Id": "A315B414-18BC-7B98-DC2F-36DD532B5AA4",
+    "Code": "dz",
+    "Name": "Dzongkha"
+  },
+  {
+    "Id": "B5720492-1A57-78ED-DF1C-930C5D57AF68",
+    "Code": "el",
+    "Name": "Greek"
+  },
+  {
+    "Id": "C30F3F07-C30B-5BDA-8BD6-8F56B1CA66AA",
+    "Code": "en",
+    "Name": "English"
+  },
+  {
+    "Id": "141F5FB2-D297-AA1E-47AE-89023B30C32B",
+    "Code": "eo",
+    "Name": "Esperanto"
+  },
+  {
+    "Id": "4F5CC07C-35A8-2DCE-6307-1B3181CA6AF5",
+    "Code": "et",
+    "Name": "Estonian"
+  },
+  {
+    "Id": "28A1B47E-FF8F-4AFD-B20A-D85753A71B04",
+    "Code": "eu",
+    "Name": "Basque"
+  },
+  {
+    "Id": "9CB451D7-122D-34A0-7610-4C0E56307CA4",
+    "Code": "ee",
+    "Name": "Ewe"
+  },
+  {
+    "Id": "74DBBC23-B689-6DB2-8092-494DADFF1971",
+    "Code": "fo",
+    "Name": "Faroese"
+  },
+  {
+    "Id": "2227E8AF-6424-60C3-99AF-A35964D196F0",
+    "Code": "fj",
+    "Name": "Fijian"
+  },
+  {
+    "Id": "E816D863-599E-4C43-2FB2-3AC6B97094C3",
+    "Code": "fi",
+    "Name": "Finnish"
+  },
+  {
+    "Id": "3589FF67-D92E-9662-D39B-AD7B3CD43B93",
+    "Code": "fr",
+    "Name": "French"
+  },
+  {
+    "Id": "F191627D-FCC7-06D6-E315-F0025B161EB6",
+    "Code": "fy",
+    "Name": "Western Frisian"
+  },
+  {
+    "Id": "065713AD-5BB5-49A4-9602-7091CB1DEC0E",
+    "Code": "ff",
+    "Name": "Fulah"
+  },
+  {
+    "Id": "53A0A4A1-A1AD-BA8E-0A9C-612043ED5C74",
+    "Code": "ka",
+    "Name": "Georgian"
+  },
+  {
+    "Id": "7B24CCBA-E479-D721-88AE-DCBBCC8464EF",
+    "Code": "de",
+    "Name": "German"
+  },
+  {
+    "Id": "17492879-F8E9-9EBF-B413-1F1D4BD3CA91",
+    "Code": "gd",
+    "Name": "Scottish Gaelic"
+  },
+  {
+    "Id": "2918AA25-993F-8BB8-8965-52201D3D75B9",
+    "Code": "ga",
+    "Name": "Irish"
+  },
+  {
+    "Id": "BA1A954B-5C82-9CEA-47B6-E6185825278D",
+    "Code": "gl",
+    "Name": "Galician"
+  },
+  {
+    "Id": "C8AA35FB-7C89-F3BD-83D0-E1E0BBB3699E",
+    "Code": "gv",
+    "Name": "Manx"
+  },
+  {
+    "Id": "8BCB1702-CF41-22E4-B731-1B304A627948",
+    "Code": "gn",
+    "Name": "Guarani"
+  },
+  {
+    "Id": "38EC610F-B438-448C-153A-41F90B4A6384",
+    "Code": "gu",
+    "Name": "Gujarati"
+  },
+  {
+    "Id": "BEFA1BD5-08D6-ACA7-D23E-840C2F1991F8",
+    "Code": "ht",
+    "Name": "Haitian"
+  },
+  {
+    "Id": "F5DE4903-7DA0-0436-1C3A-4DE4A8C233E8",
+    "Code": "ha",
+    "Name": "Hausa"
+  },
+  {
+    "Id": "0555C852-CB13-1B0E-EBCC-4BD1C58E3D8D",
+    "Code": "he",
+    "Name": "Hebrew"
+  },
+  {
+    "Id": "E5F41D09-9E20-9937-3875-2907597CFA00",
+    "Code": "hz",
+    "Name": "Herero"
+  },
+  {
+    "Id": "A46C778C-99EB-1935-D1FD-3214C44A70D1",
+    "Code": "hi",
+    "Name": "Hindi"
+  },
+  {
+    "Id": "449D3A2F-658D-A4E0-6BDF-BA709DA54E7E",
+    "Code": "ho",
+    "Name": "Hiri Motu"
+  },
+  {
+    "Id": "EAFB4423-5AC2-5D88-A9F0-54C882BF7B47",
+    "Code": "hr",
+    "Name": "Croatian"
+  },
+  {
+    "Id": "FC54F700-0C42-A9B1-3AA9-C40AE2B9C423",
+    "Code": "hu",
+    "Name": "Hungarian"
+  },
+  {
+    "Id": "058B544D-4744-98F7-8E3C-BEB81B4C6CAA",
+    "Code": "hy",
+    "Name": "Armenian"
+  },
+  {
+    "Id": "6362B22D-3C48-E087-76C1-4CEECF815C6E",
+    "Code": "ig",
+    "Name": "Igbo"
+  },
+  {
+    "Id": "1771B185-4873-6355-6487-2D7E2B9D8266",
+    "Code": "is",
+    "Name": "Icelandic"
+  },
+  {
+    "Id": "896048A4-41BA-7008-442E-F12976F78FA2",
+    "Code": "io",
+    "Name": "Ido"
+  },
+  {
+    "Id": "1B24DB01-261A-651A-F53C-132874887FD8",
+    "Code": "ii",
+    "Name": "Sichuan Yi"
+  },
+  {
+    "Id": "BE2EEAF5-3F5F-1569-B250-6A953134AB9A",
+    "Code": "iu",
+    "Name": "Inuktitut"
+  },
+  {
+    "Id": "CE7C2157-F2B6-3262-FD0B-7EB5150C7C3E",
+    "Code": "ie",
+    "Name": "Interlingue"
+  },
+  {
+    "Id": "ABBE9A8E-E10E-49C4-BF8F-323982B17AB6",
+    "Code": "ia",
+    "Name": "Interlingua"
+  },
+  {
+    "Id": "832E3D12-0AD7-8020-0B66-048426129934",
+    "Code": "id",
+    "Name": "Indonesian"
+  },
+  {
+    "Id": "37516D49-F587-B197-5D80-919F1CD1AA38",
+    "Code": "ik",
+    "Name": "Inupiaq"
+  },
+  {
+    "Id": "A976B626-1AA9-A410-672E-ADEE92B81368",
+    "Code": "is",
+    "Name": "Icelandic"
+  },
+  {
+    "Id": "D1E48E79-80FA-521E-8431-0FBC469B9C15",
+    "Code": "it",
+    "Name": "Italian"
+  },
+  {
+    "Id": "6CD8C4CF-C849-9781-D789-5DCD6606267F",
+    "Code": "jv",
+    "Name": "Javanese"
+  },
+  {
+    "Id": "54919B0A-E1C4-1FEA-AA3D-C669C04587B3",
+    "Code": "ja",
+    "Name": "Japanese"
+  },
+  {
+    "Id": "3B3B4132-8C18-8192-BF5D-15E72D0C3543",
+    "Code": "kl",
+    "Name": "Kalaallisut"
+  },
+  {
+    "Id": "CCB6A2E2-8591-C8C4-2F0F-88C388909EE3",
+    "Code": "kn",
+    "Name": "Kannada"
+  },
+  {
+    "Id": "EB8E8619-7DD5-1391-1DAA-220D1D392500",
+    "Code": "ks",
+    "Name": "Kashmiri"
+  },
+  {
+    "Id": "7E4A6226-5EDB-2754-07DB-84C3B0147220",
+    "Code": "kr",
+    "Name": "Kanuri"
+  },
+  {
+    "Id": "E902B1B9-A068-197C-F42A-9A21CE08C41D",
+    "Code": "kk",
+    "Name": "Kazakh"
+  },
+  {
+    "Id": "35FF74F1-3176-D16F-579C-9BA5F78BC4B9",
+    "Code": "km",
+    "Name": "Central Khmer"
+  },
+  {
+    "Id": "8DC94A5E-1EA5-0F59-B37F-A36DAFE95B24",
+    "Code": "ki",
+    "Name": "Kikuyu"
+  },
+  {
+    "Id": "7CD1191A-832A-3FFB-B1F7-A6910B657291",
+    "Code": "rw",
+    "Name": "Kinyarwanda"
+  },
+  {
+    "Id": "63548299-898B-C3CC-399B-1EF292974C39",
+    "Code": "ky",
+    "Name": "Kirghiz"
+  },
+  {
+    "Id": "A39D37F4-8BB1-FEE4-05DF-6C5AAECFD95A",
+    "Code": "kv",
+    "Name": "Komi"
+  },
+  {
+    "Id": "1BAD988E-4F0D-233E-9CD8-4F07C835CDEA",
+    "Code": "kg",
+    "Name": "Kongo"
+  },
+  {
+    "Id": "DDE97703-89FB-3FE1-D64C-FEEC7316163C",
+    "Code": "ko",
+    "Name": "Korean"
+  },
+  {
+    "Id": "25D99BFC-0961-6030-2CAB-43F00795B6FA",
+    "Code": "kj",
+    "Name": "Kuanyama"
+  },
+  {
+    "Id": "6A88EBCB-6816-503A-7848-F757F972B60E",
+    "Code": "ku",
+    "Name": "Kurdish"
+  },
+  {
+    "Id": "68DF3E4D-7CF8-6B61-CD49-D5C8BE7FDD65",
+    "Code": "lo",
+    "Name": "Lao"
+  },
+  {
+    "Id": "2406700E-C521-4234-29C0-FAB4F661420E",
+    "Code": "la",
+    "Name": "Latin"
+  },
+  {
+    "Id": "DF8FBFF0-590A-BB61-F738-C02364F0B88C",
+    "Code": "lv",
+    "Name": "Latvian"
+  },
+  {
+    "Id": "5F4268C0-EE3B-69AE-E64C-DFEE545F6778",
+    "Code": "li",
+    "Name": "Limburgan"
+  },
+  {
+    "Id": "20053DEB-41CC-FE4C-0D78-A0BE49671DC5",
+    "Code": "ln",
+    "Name": "Lingala"
+  },
+  {
+    "Id": "C8A0E5C4-EE37-F4D5-8D9D-595BC2379850",
+    "Code": "lt",
+    "Name": "Lithuanian"
+  },
+  {
+    "Id": "7037082A-710B-3C4C-8D67-A3DBD7CBEE4B",
+    "Code": "lb",
+    "Name": "Luxembourgish"
+  },
+  {
+    "Id": "8CF9FEBF-597C-F561-9D77-B6CB44C4CF6A",
+    "Code": "lu",
+    "Name": "Luba-Katanga"
+  },
+  {
+    "Id": "64F5BC93-2E83-17A1-CC46-1716CCD51816",
+    "Code": "lg",
+    "Name": "Ganda"
+  },
+  {
+    "Id": "50BB4179-CCB0-7B73-A43B-A21BB0CEEDD3",
+    "Code": "mk",
+    "Name": "Macedonian"
+  },
+  {
+    "Id": "8AF41676-F11C-AAB0-F5B8-B13E49215FC1",
+    "Code": "mh",
+    "Name": "Marshallese"
+  },
+  {
+    "Id": "3C81CE92-8742-C2E1-4F19-874FB41AC4C7",
+    "Code": "ml",
+    "Name": "Malayalam"
+  },
+  {
+    "Id": "6921DEE2-5E40-AD9B-0D9D-1A324391196F",
+    "Code": "mi",
+    "Name": "Maori"
+  },
+  {
+    "Id": "5D231863-C468-B506-68A7-E0570C84314D",
+    "Code": "mr",
+    "Name": "Marathi"
+  },
+  {
+    "Id": "7CA3E55F-96E8-B235-E30D-CAC8D1935A8C",
+    "Code": "ms",
+    "Name": "Malay"
+  },
+  {
+    "Id": "4CD95BCE-0992-A124-F9C6-7A49E5E44866",
+    "Code": "mk",
+    "Name": "Macedonian"
+  },
+  {
+    "Id": "41D48C04-D573-1AB3-E81D-B3B0D10DF27A",
+    "Code": "mg",
+    "Name": "Malagasy"
+  },
+  {
+    "Id": "F9910E37-D552-89BD-394E-95006E5F1C90",
+    "Code": "mt",
+    "Name": "Maltese"
+  },
+  {
+    "Id": "3E187328-3E70-FC05-586B-A69369BBF2D5",
+    "Code": "mn",
+    "Name": "Mongolian"
+  },
+  {
+    "Id": "DE190E2E-2355-9383-593E-4672481CA725",
+    "Code": "mi",
+    "Name": "Maori"
+  },
+  {
+    "Id": "CA1A37C5-56FB-B7EA-054F-5A009ABFC2B6",
+    "Code": "my",
+    "Name": "Burmese"
+  },
+  {
+    "Id": "A352CCFF-1B54-63EB-6B02-E23A11EFAD46",
+    "Code": "na",
+    "Name": "Nauru"
+  },
+  {
+    "Id": "80FD52BA-7871-C7A0-1368-049CC2711484",
+    "Code": "nv",
+    "Name": "Navajo"
+  },
+  {
+    "Id": "9A8CD8CD-7DDF-79F3-EEA6-B8506FF45D12",
+    "Code": "nr",
+    "Name": "Ndebele, South"
+  },
+  {
+    "Id": "70867DB0-5114-CD0D-6CAC-1BA382605D1C",
+    "Code": "nd",
+    "Name": "Ndebele, North"
+  },
+  {
+    "Id": "E5D26D5B-0E30-950E-143A-F8B4757D7256",
+    "Code": "ng",
+    "Name": "Ndonga"
+  },
+  {
+    "Id": "1FE52355-0E39-E92D-6A57-4B73DAC32AC4",
+    "Code": "ne",
+    "Name": "Nepali"
+  },
+  {
+    "Id": "E7DCC508-E7A7-F51E-E0C4-F8F9218C0B68",
+    "Code": "nl",
+    "Name": "Dutch"
+  },
+  {
+    "Id": "0848687E-DD0D-0665-6F7C-03CA9402CB8F",
+    "Code": "nn",
+    "Name": "Norwegian Nynorsk"
+  },
+  {
+    "Id": "58D9DD79-8AB4-15CE-3E40-207A3650E6EE",
+    "Code": "no",
+    "Name": "Norwegian"
+  },
+  {
+    "Id": "70AEAF09-911C-115F-6334-B0E9B28567AE",
+    "Code": "ny",
+    "Name": "Chichewa"
+  },
+  {
+    "Id": "9F1FE72D-1742-951E-B9DA-73CA8681A9B4",
+    "Code": "oc",
+    "Name": "Occitan"
+  },
+  {
+    "Id": "38BF2F6B-E711-A6C6-ACFB-42937DCE7D02",
+    "Code": "oj",
+    "Name": "Ojibwa"
+  },
+  {
+    "Id": "0C645943-4418-91FE-A6F4-BC6DB32173B2",
+    "Code": "or",
+    "Name": "Oriya"
+  },
+  {
+    "Id": "2F7945EE-D1E1-C530-BA26-F5347E1EE1DF",
+    "Code": "om",
+    "Name": "Oromo"
+  },
+  {
+    "Id": "06D97169-BE80-19DB-87B2-6A0D56AAB996",
+    "Code": "os",
+    "Name": "Ossetian"
+  },
+  {
+    "Id": "CE4080EC-3F8C-1C4E-3A5B-CB432F6EED3C",
+    "Code": "pa",
+    "Name": "Panjabi"
+  },
+  {
+    "Id": "2407159E-670C-CA67-F6F1-8D7449BE5045",
+    "Code": "fa",
+    "Name": "Persian"
+  },
+  {
+    "Id": "2DC3740B-338F-262F-2791-5DEB9A85CFC5",
+    "Code": "pi",
+    "Name": "Pali"
+  },
+  {
+    "Id": "F046CE7B-A458-22F3-48A2-C393FBA13CFB",
+    "Code": "pl",
+    "Name": "Polish"
+  },
+  {
+    "Id": "656A43E5-6476-FD4E-BC9F-EAE328FFFFB9",
+    "Code": "pt",
+    "Name": "Portuguese"
+  },
+  {
+    "Id": "2E1A3B7E-149A-650C-DEA3-1A305845E91E",
+    "Code": "ps",
+    "Name": "Pushto"
+  },
+  {
+    "Id": "C015802E-000C-F0E4-E306-0AC53448D6CD",
+    "Code": "qu",
+    "Name": "Quechua"
+  },
+  {
+    "Id": "76B765B6-9003-6A55-1D0E-724BB2299459",
+    "Code": "rm",
+    "Name": "Romansh"
+  },
+  {
+    "Id": "124D75CB-6965-0A5C-4BE3-808C27BAAFBC",
+    "Code": "ro",
+    "Name": "Romanian"
+  },
+  {
+    "Id": "708BCAFA-7ADD-7DA6-4E2F-47559B90DFF2",
+    "Code": "rn",
+    "Name": "Rundi"
+  },
+  {
+    "Id": "79D60E38-A3EA-5215-28B9-0CDE46D43863",
+    "Code": "ru",
+    "Name": "Russian"
+  },
+  {
+    "Id": "E81D9F03-7778-DAEF-1E1F-067A53A7BDD6",
+    "Code": "sg",
+    "Name": "Sango"
+  },
+  {
+    "Id": "05522D81-8433-30F4-D72C-C72A75E58B90",
+    "Code": "sa",
+    "Name": "Sanskrit"
+  },
+  {
+    "Id": "4ED51908-52BF-050B-27B1-3F325245A4EE",
+    "Code": "si",
+    "Name": "Sinhala"
+  },
+  {
+    "Id": "24C24C3D-EFC5-7739-4728-CB0FEBC33464",
+    "Code": "sk",
+    "Name": "Slovak"
+  },
+  {
+    "Id": "90B3155A-E95A-7AC2-F2EB-70647A9A203C",
+    "Code": "sk",
+    "Name": "Slovak"
+  },
+  {
+    "Id": "5DE46C6E-C29C-A607-64F0-A764C9832C2A",
+    "Code": "sl",
+    "Name": "Slovenian"
+  },
+  {
+    "Id": "1840E982-F25E-4900-FD0B-181A43F61627",
+    "Code": "se",
+    "Name": "Northern Sami"
+  },
+  {
+    "Id": "A9C00064-9045-FCD3-CBE8-90D9215CF148",
+    "Code": "sm",
+    "Name": "Samoan"
+  },
+  {
+    "Id": "06ABEE01-A2B8-C9C6-0F48-41FE59EA0D5D",
+    "Code": "sn",
+    "Name": "Shona"
+  },
+  {
+    "Id": "DA9223B0-632F-EBD1-F7C9-529118CF5B90",
+    "Code": "sd",
+    "Name": "Sindhi"
+  },
+  {
+    "Id": "C7C27C66-E5F6-5B4E-D143-518A51C5B611",
+    "Code": "so",
+    "Name": "Somali"
+  },
+  {
+    "Id": "24D27DEB-815F-7C1D-DD26-A58D6089F575",
+    "Code": "st",
+    "Name": "Sotho, Southern"
+  },
+  {
+    "Id": "B60AEAED-B7BE-18ED-D07A-B7B66E79EFAF",
+    "Code": "es",
+    "Name": "Spanish"
+  },
+  {
+    "Id": "660F55F4-3D1F-9B6A-830D-4DAEC6222BBA",
+    "Code": "sq",
+    "Name": "Albanian"
+  },
+  {
+    "Id": "F0EA870C-E760-592D-2809-91630F9A3AB0",
+    "Code": "sc",
+    "Name": "Sardinian"
+  },
+  {
+    "Id": "9AA75C4D-5BF9-1887-C3AF-BDACB36AE103",
+    "Code": "sr",
+    "Name": "Serbian"
+  },
+  {
+    "Id": "D4BB6D67-101A-B9C3-3F97-F3603ED965EC",
+    "Code": "ss",
+    "Name": "Swati"
+  },
+  {
+    "Id": "949D0929-C309-9968-871A-AC1D90D33B73",
+    "Code": "su",
+    "Name": "Sundanese"
+  },
+  {
+    "Id": "12D6C919-B755-1A2C-832D-515108628CC6",
+    "Code": "sw",
+    "Name": "Swahili"
+  },
+  {
+    "Id": "751F0274-D72A-2BF7-A17C-DBF9475C827B",
+    "Code": "sv",
+    "Name": "Swedish"
+  },
+  {
+    "Id": "75FF46F0-FF6D-A74E-D891-B7F13BBDDC39",
+    "Code": "ty",
+    "Name": "Tahitian"
+  },
+  {
+    "Id": "0868C68D-81D4-0CD5-4AB4-86C3C1718EFE",
+    "Code": "ta",
+    "Name": "Tamil"
+  },
+  {
+    "Id": "14376800-303B-FCCC-17F9-E959948F3F6C",
+    "Code": "tt",
+    "Name": "Tatar"
+  },
+  {
+    "Id": "A1E4117C-389D-7C1E-53FF-C59E51859951",
+    "Code": "te",
+    "Name": "Telugu"
+  },
+  {
+    "Id": "05B983CA-7EDD-D3BA-F34F-3687E307613E",
+    "Code": "tg",
+    "Name": "Tajik"
+  },
+  {
+    "Id": "16030E2E-81EA-ECD5-D272-25D380D08E15",
+    "Code": "tl",
+    "Name": "Tagalog"
+  },
+  {
+    "Id": "131FC6DE-3CD8-237E-EECC-5FB6CF790D36",
+    "Code": "th",
+    "Name": "Thai"
+  },
+  {
+    "Id": "DA6028F6-356F-20C6-372D-F02FAB77E605",
+    "Code": "bo",
+    "Name": "Tibetan"
+  },
+  {
+    "Id": "BEA979C2-8057-42AD-5457-BFA3D0D11881",
+    "Code": "ti",
+    "Name": "Tigrinya"
+  },
+  {
+    "Id": "69A94DC1-9318-4832-18C8-E89B74B89822",
+    "Code": "to",
+    "Name": "Tonga"
+  },
+  {
+    "Id": "D7009B42-9653-9D89-4196-8E9DEAA8B6BD",
+    "Code": "tn",
+    "Name": "Tswana"
+  },
+  {
+    "Id": "F9C184B4-516A-6444-6628-A86752B57AB2",
+    "Code": "ts",
+    "Name": "Tsonga"
+  },
+  {
+    "Id": "00EAD575-D70F-68CC-5A0A-DC0393828C29",
+    "Code": "tk",
+    "Name": "Turkmen"
+  },
+  {
+    "Id": "4B33B0C1-E966-7CF7-965E-B216535760AF",
+    "Code": "tr",
+    "Name": "Turkish"
+  },
+  {
+    "Id": "897CBE0F-B3FC-B804-8FF6-0E65CA464232",
+    "Code": "tw",
+    "Name": "Twi"
+  },
+  {
+    "Id": "7A6EF1A2-5BA7-203F-70C3-A4F1B1D49CE0",
+    "Code": "ug",
+    "Name": "Uighur"
+  },
+  {
+    "Id": "7B0ED45D-CAB8-10D6-7EE9-CF90E87EADFF",
+    "Code": "uk",
+    "Name": "Ukrainian"
+  },
+  {
+    "Id": "8C366513-DB3A-F076-8B61-2CFF14D42164",
+    "Code": "ur",
+    "Name": "Urdu"
+  },
+  {
+    "Id": "F0274061-39EB-1009-43EC-D7B0BDAC0F87",
+    "Code": "uz",
+    "Name": "Uzbek"
+  },
+  {
+    "Id": "6D875A19-A472-33F6-202C-1AB17D1404C4",
+    "Code": "ve",
+    "Name": "Venda"
+  },
+  {
+    "Id": "D5F2AAD3-784E-A321-903E-14585FE51F40",
+    "Code": "vi",
+    "Name": "Vietnamese"
+  },
+  {
+    "Id": "5800437D-CCC8-EC90-D1B0-8E76EC2EFA2D",
+    "Code": "vo",
+    "Name": "Volapük"
+  },
+  {
+    "Id": "BD7272C2-47B9-82C3-D09D-C4259CFCB37B",
+    "Code": "cy",
+    "Name": "Welsh"
+  },
+  {
+    "Id": "F622FEAA-D0BC-AE64-0328-24E232AC2756",
+    "Code": "wa",
+    "Name": "Walloon"
+  },
+  {
+    "Id": "36E047F5-D9E8-001D-80A4-04EFBBA74539",
+    "Code": "wo",
+    "Name": "Wolof"
+  },
+  {
+    "Id": "9BD9C0C1-C8FE-07E6-9139-4D6ECCD6DF94",
+    "Code": "xh",
+    "Name": "Xhosa"
+  },
+  {
+    "Id": "D35C781B-AF07-E93E-C4F3-2AEFB5CEB2AF",
+    "Code": "yi",
+    "Name": "Yiddish"
+  },
+  {
+    "Id": "46BDC292-154F-0F6D-B4FF-90E812938E05",
+    "Code": "yo",
+    "Name": "Yoruba"
+  },
+  {
+    "Id": "7B664664-FB21-DB74-6FDE-9840E3720A70",
+    "Code": "za",
+    "Name": "Zhuang"
+  },
+  {
+    "Id": "1F2799A3-799B-A742-B5EE-BFDBCEFEC5AF",
+    "Code": "zh",
+    "Name": "Chinese"
+  },
+  {
+    "Id": "61532407-3333-E952-7550-2BF8AB2E0623",
+    "Code": "zu",
+    "Name": "Zulu"
+  }
+]

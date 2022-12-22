@@ -1,0 +1,95 @@
+name: Jobs API CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/Job/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - src/BuildingBlocks/Models/Custom.Attributes/**
+      - src/BuildingBlocks/Models/Contracts.Shared/**
+      - src/BuildingBlocks/Models/Contracts.Job/**
+      - .github/workflows/jobs-api.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_common.yml
+      - .github/workflows/appsettings/job/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/Job/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - src/BuildingBlocks/Models/Custom.Attributes/**
+      - src/BuildingBlocks/Models/Contracts.Shared/**
+      - src/BuildingBlocks/Models/Contracts.Job/**
+      - .github/workflows/jobs-api.yml
+      - .github/workflows/appsettings/job/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+      
+jobs:
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/Job
+      project_name: Jobs.API
+      appsettings_path: job
+
+  sand:
+    if: ${{ github.event.inputs.environment == 'sand' }}
+    needs: build
+    uses: ./.github/workflows/deploy_common.yml
+    with:
+      azure_web_app_name: app-mm-job-sand
+      azure_web_app_slot_name: production
+      project_name: Jobs.API
+      appsettings_json: job/job-sand.json
+    secrets:
+      azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+    if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+    needs: build
+    uses: ./.github/workflows/deploy_common.yml
+    with:
+      azure_web_app_name: app-mm-job-dev
+      azure_web_app_slot_name: production
+      project_name: Jobs.API
+      appsettings_json: job/job-dev.json
+    secrets:
+      azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+    if: ${{ github.event.inputs.environment == 'test' }}
+    needs: build
+    uses: ./.github/workflows/deploy_common.yml
+    with:
+      azure_web_app_name: app-mm-job-test
+      azure_web_app_slot_name: stage
+      project_name: Jobs.API
+      appsettings_json: job/job-test.json
+    secrets:
+      azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+    if: ${{ github.event.inputs.environment == 'prod' }}
+    needs: build
+    uses: ./.github/workflows/deploy_common.yml
+    with:
+      azure_web_app_name: app-mm-job-prod
+      azure_web_app_slot_name: stage
+      project_name: Jobs.API
+      appsettings_json: job/job-prod.json
+    secrets:
+      azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

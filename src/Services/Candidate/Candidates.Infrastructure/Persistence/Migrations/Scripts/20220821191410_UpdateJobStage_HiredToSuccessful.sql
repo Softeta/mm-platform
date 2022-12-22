@@ -1,0 +1,2 @@
+UPDATE [candidate].[CandidateArchivedInJobs] SET [JobStage] = 'Successful' WHERE [JobStage] = 'Hired'
+UPDATE [candidate].[CandidateSelectedInJobs] SET [JobStage] = 'Successful' WHERE [JobStage] = 'Hired'

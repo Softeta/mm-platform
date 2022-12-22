@@ -1,0 +1,102 @@
+name: Reusable API deploy 
+
+on:
+  workflow_call:
+    inputs:
+      azure_web_app_name:
+        required: true
+        type: string
+      azure_web_app_slot_name:
+        required: true
+        type: string
+      project_name:
+        required: true
+        type: string
+      appsettings_json:
+        required: true
+        type: string
+      yarn_replace_needed:
+        required: false
+        type: string
+      yarp_job_api_address:
+        required: false
+        type: string
+      yarp_jobcandidates_api_address:
+        required: false
+        type: string
+      yarp_company_api_address:
+        required: false
+        type: string
+      yarp_candidate_api_address:
+        required: false
+        type: string
+      yarp_candidatetests_api_address:
+        required: false
+        type: string
+      yarp_skill_api_address:
+        required: false
+        type: string
+      yarp_jobposition_api_address:
+        required: false
+        type: string
+      yarn_administrationsettings_api_address:
+        required: false
+        type: string
+    secrets:
+      azure_credentials:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Login Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.azure_credentials }}
+          
+      - name: Download Artifact ${{ inputs.project_name }}
+        uses: actions/download-artifact@v2.1.0
+        with:
+          name: ${{ inputs.project_name }}
+
+      - name: Extract artifact
+        run: tar -xf ${{ inputs.project_name }}.tar.gz
+        
+      - name: Yarp settings replace
+        if: ${{ inputs.yarn_replace_needed == 'true' }}
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: '**/yarp.json'
+        env:
+          Yarp.Clusters.Job.Destinations.JobRoot.Address: ${{ inputs.yarp_job_api_address }}
+          Yarp.Clusters.JobCandidates.Destinations.JobCandidatesRoot.Address: ${{ inputs.yarp_jobcandidates_api_address }}
+          Yarp.Clusters.Candidate.Destinations.CandidateRoot.Address: ${{ inputs.yarp_candidate_api_address }}
+          Yarp.Clusters.CandidateTests.Destinations.CandidateTestsRoot.Address: ${{ inputs.yarp_candidatetests_api_address }}
+          Yarp.Clusters.Company.Destinations.CompanyRoot.Address: ${{ inputs.yarp_company_api_address }}
+          Yarp.Clusters.Skill.Destinations.SkillRoot.Address: ${{ inputs.yarp_skill_api_address }}
+          Yarp.Clusters.JobPosition.Destinations.JobPositionRoot.Address: ${{ inputs.yarp_jobposition_api_address }}
+          Yarp.Clusters.AdministrationSettings.Destinations.AdministrationSettingsRoot.Address: ${{ inputs.yarn_administrationsettings_api_address }}
+      
+      - name: Read Azure App Service Settings config
+        id: vars
+        run: |
+             echo ::set-output name=service_settings::$(cat ${{ inputs.appsettings_json }})
+
+      - name: Azure App Service Settings
+        uses: Azure/appservice-settings@v1
+        with:
+          app-name: ${{ inputs.azure_web_app_name }}
+          app-settings-json: ${{ steps.vars.outputs.service_settings }}
+          slot-name: ${{ inputs.azure_web_app_slot_name }}
+
+      - name: Deploy Web App ${{ inputs.azure_web_app_name }}
+        uses: azure/webapps-deploy@v2
+        with: 
+          app-name: ${{ inputs.azure_web_app_name }}
+          slot-name: ${{ inputs.azure_web_app_slot_name }}
+            
+      - name: Logout Azure
+        run: |
+          az logout

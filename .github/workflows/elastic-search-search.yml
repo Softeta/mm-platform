@@ -1,0 +1,87 @@
+name: Elastic Search Search CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/ElasticSearch/ElasticSearch.Search/**
+      - src/Services/ElasticSearch/ElasticSearch.Shared/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - .github/workflows/elastic-search-search.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_function_app_common.yml
+      - .github/workflows/appsettings/elastic-search-search/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/ElasticSearch/ElasticSearch.Search/**
+      - src/Services/ElasticSearch/ElasticSearch.Shared/**
+      - src/BuildingBlocks/Infrastructure/**
+      - src/BuildingBlocks/Models/Domain.Seedwork/**
+      - .github/workflows/elastic-search-search.yml
+      - .github/workflows/appsettings/elastic-search-search/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/ElasticSearch
+      project_name: ElasticSearch.Search
+      appsettings_path: elastic-search-search
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-elastic-search-search-sand
+        project_name: ElasticSearch.Search
+        appsettings_json: elastic-search-search/elastic-search-search-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-elastic-search-search-dev
+        project_name: ElasticSearch.Search
+        appsettings_json: elastic-search-search/elastic-search-search-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-elastic-search-search-test
+        project_name: ElasticSearch.Search
+        appsettings_json: elastic-search-search/elastic-search-search-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-elastic-search-search-prod
+        project_name: ElasticSearch.Search
+        appsettings_json: elastic-search-search/elastic-search-search-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

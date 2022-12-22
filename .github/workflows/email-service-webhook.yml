@@ -1,0 +1,83 @@
+name: Email Service Web Hook CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/EmailService/EmailService.WebHook/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/email-service-webhook.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_function_app_common.yml
+      - .github/workflows/appsettings/email-service-webhook/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/EmailService/EmailService.WebHook/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/email-service-webhook.yml
+      - .github/workflows/appsettings/email-service-webhook/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/EmailService
+      project_name: EmailService.WebHook
+      appsettings_path: email-service-webhook
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-webhook-sand
+        project_name: EmailService.WebHook
+        appsettings_json: email-service-webhook/email-service-webhook-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-webhook-dev
+        project_name: EmailService.WebHook
+        appsettings_json: email-service-webhook/email-service-webhook-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-webhook-test
+        project_name: EmailService.WebHook
+        appsettings_json: email-service-webhook/email-service-webhook-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-webhook-prod
+        project_name: EmailService.WebHook
+        appsettings_json: email-service-webhook/email-service-webhook-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

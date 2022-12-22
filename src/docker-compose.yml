@@ -1,0 +1,82 @@
+version: '3.4'
+
+services:
+  backoffice-bff-api:
+    image: ${DOCKER_REGISTRY:-marcher-markholt}/backoffice.bff.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: ApiGateways/BackOffice/BackOffice.Bff.API/Dockerfile
+    depends_on:
+      - candidates-api
+      - companies-api
+      - jobs-api
+      - administration-settings-api
+    networks:
+      - mm-compose-network
+
+  frontoffice-bff-api:
+    image: ${DOCKER_REGISTRY:-marcher-markholt}/frontoffice.bff.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: ApiGateways/FrontOffice/FrontOffice.Bff.API/Dockerfile
+    depends_on:
+      - candidates-api
+      - companies-api
+      - jobs-api
+    networks:
+      - mm-compose-network
+      
+  candidates-api:
+    image: ${DOCKER_REGISTRY:-marcher-markholt}/candidates.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/Candidate/Candidates.API/Dockerfile
+    depends_on:
+      - sql_mm_local
+    networks:
+      - mm-compose-network
+      
+  companies-api:
+    image: ${REGISTRY:-marcher-markholt}/companies.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/Company/Companies.API/Dockerfile
+    depends_on:
+      - sql_mm_local
+    networks:
+      - mm-compose-network
+
+  jobs-api:
+    image: ${REGISTRY:-marcher-markholt}/jobs.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/Job/Jobs.API/Dockerfile
+    depends_on:
+      - sql_mm_local
+    networks:
+      - mm-compose-network
+
+  administration-settings-api:
+    image: ${REGISTRY:-marcher-markholt}/administration-settings.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/AdministrationSettings/AdministrationSettings.API/Dockerfile
+    networks:
+      - mm-compose-network
+
+  sql_mm_local:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Admin123!
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - ../mm-sql-volume:/var/opt/mssql/data
+    networks:
+      - mm-compose-network
+
+networks:
+  mm-compose-network:
+    external:
+      name: mm-network

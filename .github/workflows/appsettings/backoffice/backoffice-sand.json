@@ -1,0 +1,147 @@
+[
+ {
+    "name": "AzureAd__Authority",
+    "value": "https://login.microsoftonline.com/baeb372e-3535-4dcd-b14f-898ade9a376b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__Audience",
+    "value": "api://app-mm-back-office-sand",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__AuthorizationUri",
+    "value": "/oauth2/v2.0/authorize",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__TokenUri",
+    "value": "/oauth2/v2.0/token",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApiScope",
+    "value": "BackOffice.User",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAd__ApplicationId",
+    "value": "5b69cba7-c95c-4769-8a5d-af0886130a3b",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2C__Instance",
+    "value": "https://marchermarholt.b2clogin.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2C__Domain",
+    "value": "marchermarholt.onmicrosoft.com",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2C__ClientId",
+    "value": "7cee3a79-554f-45bf-882e-a51b8f7cca91",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureAdB2C__SignedOutCallbackPath",
+    "value": "/signout/B2C_1_front-office-user-flow",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__JobsApiUrl",
+    "value": "https://app-mm-job-sand.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CompaniesApiUrl",
+    "value": "https://app-mm-company-sand.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__CandidatesApiUrl",
+    "value": "https://app-mm-candidate-sand.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__ElasticSearchApiUrl",
+    "value": "https://func-mm-elastic-search-search-sand.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Cors__AllowedOrigins",
+    "value": "https://salmon-grass-044ebcf03.1.azurestaticapps.net;http://localhost:3000;http://localhost:3001",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Default",
+    "value": "Debug",
+    "slotSetting": false
+  },
+  {
+    "name": "Logging__LogLevel__Microsoft__AspNetCore",
+    "value": "Debug",
+    "slotSetting": false
+  },
+  {
+    "name": "ApplicationInsights__InstrumentationKey",
+    "value": "4d275769-afc5-491e-ad80-9447b40863cc",
+    "slotSetting": false
+  },
+  {
+    "name": "StorageAccount__AccountName",
+    "value": "stmmwebsand",
+    "slotSetting": false
+  },
+  {
+    "name": "GlobalKeyVault",
+    "value": "kv-mm-platform-sand-01",
+    "slotSetting": false
+  },
+  {
+    "name": "ElasticSearch__SuggestedCandidatesKey",
+    "value": "eIOdR1t2ZOjuquf_rSVKI1NtfVkYKqIVRT34ocjSIFFMAzFuxMpDRg==",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__AdministrationSettingsApiUrl",
+    "value": "https://app-mm-administration-settings-sand.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "Services__TagSystemApiUrl",
+    "value": "https://app-mm-tags-sand.azurewebsites.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "FormRecognizerSettings__Url",
+    "value": "https://fr-mm-candidates-cv-parser.cognitiveservices.azure.com/",
+    "slotSetting": false	
+  },
+  {
+    "name": "FormRecognizerSettings__LinkedInModelId",
+    "value": "95f0ec24-3aa3-4b9d-8c71-3dca6a7b84ff",
+    "slotSetting": false	
+  },
+  {
+	"name": "BlobStorageContainers__CandidateCurriculumVitaesContainer",
+	"value": "candidate-curriculumvitaes",
+    "slotSetting": false	
+  },
+  {
+    "name": "HereSearchApi__Url",
+    "value": "https://geocode.search.hereapi.com/v1/geocode",
+      "slotSetting": false	
+    },
+  {
+	"name": "PrivateStorageAccount__AccountName",
+	"value": "stmmplatformprivatesand",
+    "slotSetting": false	
+  },
+  {
+	"name": "PrivateStorageAccount__ExpirationInMinutes",
+	"value": 15,
+    "slotSetting": false	
+  }
+]

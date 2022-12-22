@@ -1,0 +1,55 @@
+name: Reusable Function App deploy 
+
+on:
+  workflow_call:
+    inputs:
+      azure_function_app_name:
+        required: true
+        type: string
+      project_name:
+        required: true
+        type: string
+      appsettings_json:
+        required: true
+        type: string
+    secrets:
+      azure_credentials:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Login Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.azure_credentials }}
+          
+      - name: Download Artifact ${{ inputs.project_name }}
+        uses: actions/download-artifact@v2.1.0
+        with:
+          name: ${{ inputs.project_name }}
+          
+      - name: Extract artifact
+        run: tar -xf ${{ inputs.project_name }}.tar.gz
+
+      - name: Read Azure App Service Settings config
+        id: vars
+        run: |
+             echo ::set-output name=service_settings::$(cat ${{ inputs.appsettings_json }})
+
+      - name: Azure App Service Settings
+        uses: Azure/appservice-settings@v1
+        with:
+          app-name: ${{ inputs.azure_function_app_name }}
+          app-settings-json: ${{ steps.vars.outputs.service_settings }}
+          
+      - name: Deploy Function App ${{ inputs.azure_function_app_name }}
+        uses: Azure/functions-action@v1.4.4
+        with: 
+          app-name: ${{ inputs.azure_function_app_name }}
+            
+      - name: Logout Azure
+        run: |
+          az logout

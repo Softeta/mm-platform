@@ -1,0 +1,83 @@
+name: Email Service Send CI/CD
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/Services/EmailService/EmailService.Send/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/email-service-send.yml
+      - .github/workflows/build_common.yml
+      - .github/workflows/deploy_function_app_common.yml
+      - .github/workflows/appsettings/email-service-send/**.json
+  pull_request:
+    branches: [ master ]
+    paths:
+      - src/Services/EmailService/EmailService.Send/**
+      - src/BuildingBlocks/Infrastructure/**
+      - .github/workflows/email-service-send.yml
+      - .github/workflows/appsettings/email-service-send/**.json
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment for CD'
+        required: false
+        default: 'dev' 
+        options:
+        - sand
+        - dev
+        - test
+        - prod
+
+jobs: 
+  build:
+    uses: ./.github/workflows/build_common.yml
+    with:
+      project_path: src/Services/EmailService
+      project_name: EmailService.Send
+      appsettings_path: email-service-send
+
+  sand:
+      if: ${{ github.event.inputs.environment == 'sand' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-send-sand
+        project_name: EmailService.Send
+        appsettings_json: email-service-send/email-service-send-sand.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  dev:
+      if: ${{ github.event_name == 'push' ||  github.event.inputs.environment == 'dev' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-send-dev
+        project_name: EmailService.Send
+        appsettings_json: email-service-send/email-service-send-dev.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  test:
+      if: ${{ github.event.inputs.environment == 'test' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-send-test
+        project_name: EmailService.Send
+        appsettings_json: email-service-send/email-service-send-test.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+
+  prod:
+      if: ${{ github.event.inputs.environment == 'prod' }}
+      needs: build
+      uses: ./.github/workflows/deploy_function_app_common.yml
+      with:
+        azure_function_app_name: func-mm-email-service-send-prod
+        project_name: EmailService.Send
+        appsettings_json: email-service-send/email-service-send-prod.json
+      secrets:
+        azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
